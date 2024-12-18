@@ -1,16 +1,23 @@
 package testcase;
 
-import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
 import pageObjectmodel.Home;
 
 public class HomeTest extends BaseTest{
-	WebDriver driver = BaseTest.driver;
-	Home homePage = new Home(driver);
-	
-	@Test
+
+	 Home homePage;
+	 
+	 @BeforeMethod
+	    public void setUpHomePage() {
+	        
+	        homePage = new Home(driver);
+	    }
+	 
+	 
+	@Test(priority =1)
 	public void verifyUrl() {
 		
 		String url = homePage.getUrl();
@@ -24,5 +31,21 @@ public class HomeTest extends BaseTest{
 		}
 		
 	}
+	
+	
+	public void verifyHomeWinLogo() {
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

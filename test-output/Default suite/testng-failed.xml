@@ -6,14 +6,10 @@
       <class name="testcase.HomeTest">
         <methods>
           <include name="setUp"/>
+          <include name="tearDown"/>
           <include name="verifyUrl"/>
         </methods>
       </class> <!-- testcase.HomeTest -->
-      <class name="base.BaseTest">
-        <methods>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- base.BaseTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
