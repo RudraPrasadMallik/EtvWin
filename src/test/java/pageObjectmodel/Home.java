@@ -3,10 +3,15 @@ package pageObjectmodel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import base.BaseTest;
 
+
 public class Home {
+	
+	private static final Logger logger = LogManager.getLogger(Home.class);
 	private WebDriver driver;
 	
 	 public Home(WebDriver driver) {
@@ -15,14 +20,14 @@ public class Home {
 	
 	 
 	 public  String getUrl() {
-		  System.out.println("This is HomeTse getUrl");
+		  logger.info("This is HomeTse getUrl");
 	        return driver.getCurrentUrl();
 	      
 	    }
 	 
 	 public void maximizeScreen() {
 	        driver.manage().window().maximize(); // Maximizes the browser window
-	        System.out.println("Browser window maximized");
+	        logger.info("Browser window maximized");
 	    }
 	 
         public WebElement winlogoHome() {
@@ -33,56 +38,76 @@ public class Home {
      		
      	 }	
         
+        
         // Tabs
         
-        public By homeTab() {
-        WebElement homeTab= driver.findElement(By.xpath("home-link"));
+        public WebElement homeTab() {
+        	String home = BaseTest.loc.getProperty("home-link");
+         WebElement homeTab= driver.findElement(By.xpath(home));
         	
-			return (By) homeTab;
+			return  homeTab;
         }
         
-        public WebElement tvShowsTab() {
-            WebElement tvshowsTab= driver.findElement(By.xpath("tvShows-link"));
+        public WebElement tvShowsTab() 
+        {
+        	String tvshow = BaseTest.loc.getProperty("tvShows-link");
+            WebElement tvshowsTab= driver.findElement(By.xpath(tvshow));
             	
     			return tvshowsTab;
             }
         
         public WebElement moviesTab() {
-            WebElement moviesTab= driver.findElement(By.xpath("movies-linlk"));
+        	String movie = BaseTest.loc.getProperty("movies-linlk");
+            WebElement moviesTab= driver.findElement(By.xpath(movie));
             	
     			return moviesTab;
             }
         
         public WebElement watchFreeTab() {
-            WebElement watchfreeTab= driver.findElement(By.xpath("watchFree-link"));
+        	
+        	String watchfree =BaseTest.loc.getProperty("watchFree-link");
+            WebElement watchfreeTab= driver.findElement(By.xpath(watchfree));
             	
     			return watchfreeTab;
             }
+        
         public WebElement liveTvTab() {
-            WebElement livetvTab= driver.findElement(By.xpath("livetv-link"));
+        	String livetv = BaseTest.loc.getProperty("livetv-link");
+            WebElement livetvTab= driver.findElement(By.xpath(livetv));
             	
     			return livetvTab;
             }
         
+        
         //Buttons on navbar
         
         public WebElement searchButton() {
-            WebElement searchButton= driver.findElement(By.xpath("searchbtn-link"));
+        	String search = BaseTest.loc.getProperty("searchbtn-link");
+            WebElement searchButton= driver.findElement(By.xpath(search));
             	
     			return searchButton;
             }
         
         public WebElement subscribeButton() {
-            WebElement subscribebutton = driver.findElement(By.xpath("subscribebtn-link"));
+        	String subscribe = BaseTest.loc.getProperty("subscribebtn-link");
+            WebElement subscribebutton = driver.findElement(By.xpath(subscribe));
             	
     			return subscribebutton;
             }
+        
         public WebElement loginButton() {
-            WebElement loginbutton = driver.findElement(By.xpath("loginbtn-link"));
+        	String login =BaseTest.loc.getProperty("loginbtn-link");
+            WebElement loginbutton = driver.findElement(By.xpath(login));
             	
     			return loginbutton;
             }
 	 
+        public WebElement searchInput() {
+        	 String input = BaseTest.loc.getProperty("search-inputbox");
+        	 WebElement search = driver.findElement(By.id(input));
+        	 
+        	 return search;
+        }
 	 
 
 }
