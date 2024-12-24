@@ -2,42 +2,42 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-23T15:51:10 IST" name="Default suite" finished-at="2024-12-23T15:51:24 IST" duration-ms="13992">
+  <suite started-at="2024-12-24T14:23:18 IST" name="Default suite" finished-at="2024-12-24T14:24:09 IST" duration-ms="50956">
     <groups>
     </groups>
-    <test started-at="2024-12-23T15:51:10 IST" name="Default test" finished-at="2024-12-23T15:51:24 IST" duration-ms="13992">
+    <test started-at="2024-12-24T14:23:18 IST" name="Default test" finished-at="2024-12-24T14:24:09 IST" duration-ms="50956">
       <class name="base.BaseTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:base.BaseTest@a7e2d9d]" started-at="2024-12-23T15:51:10 IST" name="setUp" finished-at="2024-12-23T15:51:21 IST" duration-ms="11155" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:base.BaseTest@754777cd]" started-at="2024-12-24T14:23:18 IST" name="setUp" finished-at="2024-12-24T14:24:03 IST" duration-ms="44893" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:base.BaseTest@a7e2d9d]" started-at="2024-12-23T15:51:24 IST" name="tearDown" finished-at="2024-12-23T15:51:24 IST" duration-ms="227" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:base.BaseTest@754777cd]" started-at="2024-12-24T14:24:08 IST" name="tearDown" finished-at="2024-12-24T14:24:09 IST" duration-ms="727" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- base.BaseTest -->
       <class name="testcase.HomeTest">
-        <test-method is-config="true" signature="setUpHomePage()[pri:0, instance:testcase.HomeTest@517bd097]" started-at="2024-12-23T15:51:21 IST" name="setUpHomePage" finished-at="2024-12-23T15:51:21 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUpHomePage()[pri:0, instance:testcase.HomeTest@142eef62]" started-at="2024-12-24T14:24:03 IST" name="setUpHomePage" finished-at="2024-12-24T14:24:03 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpHomePage -->
-        <test-method signature="verifyUrl()[pri:1, instance:testcase.HomeTest@517bd097]" started-at="2024-12-23T15:51:21 IST" name="verifyUrl" finished-at="2024-12-23T15:51:23 IST" duration-ms="1478" status="PASS">
+        <test-method signature="verifyUrl()[pri:1, instance:testcase.HomeTest@142eef62]" started-at="2024-12-24T14:24:03 IST" name="verifyUrl" finished-at="2024-12-24T14:24:07 IST" duration-ms="4534" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUrl -->
-        <test-method is-config="true" signature="setUpHomePage()[pri:0, instance:testcase.HomeTest@517bd097]" started-at="2024-12-23T15:51:23 IST" name="setUpHomePage" finished-at="2024-12-23T15:51:23 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpHomePage -->
-        <test-method signature="allicontentVisibilityonHome()[pri:3, instance:testcase.HomeTest@517bd097]" started-at="2024-12-23T15:51:23 IST" name="allicontentVisibilityonHome" finished-at="2024-12-23T15:51:23 IST" duration-ms="478" status="PASS">
+        <test-method signature="allicontentVisibilityonHome()[pri:3, instance:testcase.HomeTest@142eef62]" started-at="2024-12-24T14:24:07 IST" name="allicontentVisibilityonHome" finished-at="2024-12-24T14:24:08 IST" duration-ms="361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- allicontentVisibilityonHome -->
-        <test-method is-config="true" signature="setUpHomePage()[pri:0, instance:testcase.HomeTest@517bd097]" started-at="2024-12-23T15:51:23 IST" name="setUpHomePage" finished-at="2024-12-23T15:51:23 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUpHomePage()[pri:0, instance:testcase.HomeTest@142eef62]" started-at="2024-12-24T14:24:07 IST" name="setUpHomePage" finished-at="2024-12-24T14:24:07 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpHomePage -->
-        <test-method signature="TC004()[pri:4, instance:testcase.HomeTest@517bd097]" started-at="2024-12-23T15:51:23 IST" name="TC004" finished-at="2024-12-23T15:51:24 IST" duration-ms="600" status="PASS">
+        <test-method is-config="true" signature="setUpHomePage()[pri:0, instance:testcase.HomeTest@142eef62]" started-at="2024-12-24T14:24:08 IST" name="setUpHomePage" finished-at="2024-12-24T14:24:08 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpHomePage -->
+        <test-method signature="TC004()[pri:4, instance:testcase.HomeTest@142eef62]" started-at="2024-12-24T14:24:08 IST" name="TC004" finished-at="2024-12-24T14:24:08 IST" duration-ms="269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC004 -->

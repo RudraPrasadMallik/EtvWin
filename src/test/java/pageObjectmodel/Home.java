@@ -108,6 +108,12 @@ public class Home {
         	 
         	 return search;
         }
+        
+        public WebElement searchedContent() {
+        	String items = BaseTest.loc.getProperty("searched-items");
+        	WebElement searchitems = driver.findElement(By.xpath(items));
+			return null;
+        }
 	 
 
 }

@@ -45,8 +45,7 @@ public class HomeTest extends BaseTest{
 		
 		homePage.maximizeScreen();
 	}
-	
-	
+		
 	
 //	@Test(priority =2)
 	public void verifyHomeWinLogo() {
@@ -108,14 +107,18 @@ public class HomeTest extends BaseTest{
 	
 	@Test(priority=4)
 	public void TC004() {
-		
-		if(homePage.searchButton().isEnabled()) {
-			homePage.searchButton().click();
-			logger.info("Clicked on Search Button");
-		}
-		else {
-			logger.error("Not able to click on Search");
-		}
+		 String movieName = BaseTest.prop.getProperty("movieName");
+		    
+		    WebElement searchButton = homePage.searchButton();
+		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		    
+		    // Wait for the search button to be clickable
+		    wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+		    searchButton.click();
+		    logger.info("Clicked on Search Button");
+		    WebElement searchInput = homePage.searchInput();
+		    searchInput.sendKeys(movieName);
+		    logger.info("Entered movie name: " + movieName);
 		
 		
 	}
