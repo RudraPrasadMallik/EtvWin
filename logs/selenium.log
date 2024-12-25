@@ -47,3 +47,20 @@
 2024-12-24 14:24:08 INFO  [main] testcase.HomeTest - Clicked on Search Button
 2024-12-24 14:24:08 INFO  [main] testcase.HomeTest - Entered movie name: cha
 2024-12-24 14:24:09 INFO  [main] base.BaseTest - Browser driver closed.
+2024-12-25 12:32:22 INFO  [main] base.BaseTest - setUp Started
+2024-12-25 12:32:46 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2024-12-25 12:32:46 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2024-12-25 12:32:47 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2024-12-25 12:32:47 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2024-12-25 12:33:00 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2024-12-25 12:33:01 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (68647a9d2c86beec226b41df152bc997)] -> xpath: //a[normalize-space()='Home']]
+2024-12-25 12:33:01 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (68647a9d2c86beec226b41df152bc997)] -> xpath: //a[normalize-space()='TV Shows']]
+2024-12-25 12:33:01 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (68647a9d2c86beec226b41df152bc997)] -> xpath: //a[normalize-space()='Movies']]
+2024-12-25 12:33:01 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (68647a9d2c86beec226b41df152bc997)] -> xpath: //a[normalize-space()='Watch Free']]
+2024-12-25 12:33:01 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (68647a9d2c86beec226b41df152bc997)] -> xpath: //a[normalize-space()='Live TV']]
+2024-12-25 12:33:01 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (68647a9d2c86beec226b41df152bc997)] -> xpath: //div[@class='links']//div//form[@class='search-bar']//div//div[@id='button-addon1']//*[name()='svg']]
+2024-12-25 12:33:01 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (68647a9d2c86beec226b41df152bc997)] -> xpath: //a[@class='button-color nav-link']]
+2024-12-25 12:33:01 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (68647a9d2c86beec226b41df152bc997)] -> xpath: //li[normalize-space()='Login']]
+2024-12-25 12:33:02 INFO  [main] testcase.HomeTest - Clicked on Search Button
+2024-12-25 12:33:02 INFO  [main] testcase.HomeTest - Entered movie name: cha
+2024-12-25 12:33:08 INFO  [main] base.BaseTest - Browser driver closed.

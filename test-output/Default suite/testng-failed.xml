@@ -7,8 +7,9 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="TV007"/>
           <include name="setUpHomePage"/>
-          <include name="allicontentVisibilityonHome"/>
+          <include name="TC004"/>
         </methods>
       </class> <!-- testcase.HomeTest -->
     </classes>

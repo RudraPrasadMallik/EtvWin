@@ -112,7 +112,14 @@ public class Home {
         public WebElement searchedContent() {
         	String items = BaseTest.loc.getProperty("searched-items");
         	WebElement searchitems = driver.findElement(By.xpath(items));
-			return null;
+			return searchitems;
+        }
+        
+        public WebElement searchCancelbtn() {
+        	String items = BaseTest.loc.getProperty("search-cancel");
+        	WebElement cancelbtn = driver.findElement(By.xpath(items));
+        	return cancelbtn;
+        	
         }
 	 
 

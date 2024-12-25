@@ -119,9 +119,94 @@ public class HomeTest extends BaseTest{
 		    WebElement searchInput = homePage.searchInput();
 		    searchInput.sendKeys(movieName);
 		    logger.info("Entered movie name: " + movieName);
+		    
+		   logger.info("This is the searched Content:"+homePage.searchedContent());
 		
-		
+		   homePage.searchCancelbtn().click();
+		   logger.info("Clicked on cancel btn on search page");
 	}
+	
+	
+	public void TC005() {
+	
+		    String invalidMovieName = "SomeNonExistentMovie";
+
+		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		    
+		    WebElement searchInput = homePage.searchInput();
+		    wait.until(ExpectedConditions.visibilityOf(searchInput));
+		    
+		    searchInput.sendKeys(invalidMovieName);
+		    logger.info("Entered invalid movie name: " + invalidMovieName);
+
+		    
+		    wait.until(ExpectedConditions.visibilityOf(homePage.searchedContent()));
+		    
+		    String searchResultsText = homePage.searchedContent().getText();
+		    logger.info("Search results: " + searchResultsText);
+		    
+		    // Assert that no results are found or an appropriate message is displayed
+		    Assert.assertTrue(searchResultsText.contains("No results found") || searchResultsText.isEmpty(), 
+		                      "Invalid search did not show 'no results' message.");
+		    
+		    // Optionally, cancel the search after the test
+		    homePage.searchCancelbtn().click();
+		    logger.info("Clicked on cancel button on search page");
+		}
+	
+	
+ 
+	 public void TC006() {
+		 WebElement subscribe = homePage.subscribeButton();
+		 
+		 String homeUrl = BaseTest.loc.getProperty("main-Url");
+		   String currentUrl = driver.getCurrentUrl();
+		   logger.info(currentUrl);
+		   if(currentUrl != homeUrl ) {
+			   driver.navigate().to(homeUrl);
+		   }
+		   
+		   
+		   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		   
+		   wait.until(ExpectedConditions.visibilityOf(subscribe));
+		   subscribe.click();
+		   logger.info("Clicked on Subscribe");
+		   logger.info("current page is :" + driver.getCurrentUrl());
+		 
+	 }
+		
+	 @Test(priority =50)
+		public void TV007() {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("form")));
+			
+	        WebElement form = driver.findElement(By.tagName("form"));
+	        List<WebElement> formElements = form.findElements(By.xpath(".//*"));
+	        
+	        for (WebElement element : formElements) {
+	            System.out.println("Element: " + element.getTagName() + " | Text: " + element.getText());
+	        }
+	        
+	        
+	        
+	        // Find specific elements inside the form (example: <h2> with text 'Choose Plan')
+//	        WebElement heading = form.findElement(By.xpath(".//h2[text()='Choose Plan']"));
+//	        System.out.println("Heading Text: " + heading.getText());
+//
+//	        // Find all the "premium-class" divs inside the form
+//	        List<WebElement> premiumClasses = form.findElements(By.className("premium-class"));
+//	        for (WebElement premiumClass : premiumClasses) {
+//	            System.out.println("Premium Class Text: " + premiumClass.getText());
+//	        }
+//
+//	        // Find the "Buy now" button
+//	        WebElement buyNowButton = form.findElement(By.id("buy-now"));
+//	        System.out.println("Buy Now Button Text: " + buyNowButton.getText());
+		}
+	
+	
+	
 	
 	
 	
