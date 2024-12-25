@@ -177,32 +177,14 @@ public class HomeTest extends BaseTest{
 	 }
 		
 	 @Test(priority =50)
-		public void TV007() {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-	        wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("form")));
+		public void TC007() {
+		String plantxt = BaseTest.loc.getProperty("choose-plan-txt");
+		  logger.info(plantxt);
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        
+		 
 			
-	        WebElement form = driver.findElement(By.tagName("form"));
-	        List<WebElement> formElements = form.findElements(By.xpath(".//*"));
-	        
-	        for (WebElement element : formElements) {
-	            System.out.println("Element: " + element.getTagName() + " | Text: " + element.getText());
-	        }
-	        
-	        
-	        
-	        // Find specific elements inside the form (example: <h2> with text 'Choose Plan')
-//	        WebElement heading = form.findElement(By.xpath(".//h2[text()='Choose Plan']"));
-//	        System.out.println("Heading Text: " + heading.getText());
-//
-//	        // Find all the "premium-class" divs inside the form
-//	        List<WebElement> premiumClasses = form.findElements(By.className("premium-class"));
-//	        for (WebElement premiumClass : premiumClasses) {
-//	            System.out.println("Premium Class Text: " + premiumClass.getText());
-//	        }
-//
-//	        // Find the "Buy now" button
-//	        WebElement buyNowButton = form.findElement(By.id("buy-now"));
-//	        System.out.println("Buy Now Button Text: " + buyNowButton.getText());
+			
 		}
 	
 	

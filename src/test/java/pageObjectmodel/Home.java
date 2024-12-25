@@ -121,6 +121,35 @@ public class Home {
         	return cancelbtn;
         	
         }
+	 public WebElement yearlyPremiumplan() {
+		 String plan = BaseTest.loc.getProperty("premium-plan-year");
+		 WebElement yearPremium =  driver.findElement(By.xpath(plan));
+		 return yearPremium;
+	 }
+	 public WebElement monthlyPremiumplan() {
+		 String plan = BaseTest.loc.getProperty("premium-plan-month");
+		 WebElement monthPremium =  driver.findElement(By.xpath(plan));
+		 return monthPremium;
+	 }
+	 public WebElement youthplan() {
+		 String plan = BaseTest.loc.getProperty("premium-plan-month");
+		 WebElement youthplan =  driver.findElement(By.xpath(plan));
+		 return youthplan;
+	 }
+	 
+	 public WebElement buyNow() {
+		 String buy = BaseTest.loc.getProperty("buy-now-btn");
+		 WebElement buynowbtn = driver.findElement(By.id(buy));
+		 return buynowbtn;
+	 }
+	 
+	 public WebElement loginpage() {
+		 String login = BaseTest.loc.getProperty("login-page");
+		 WebElement loginpage = driver.findElement(By.xpath(login));
+		 return loginpage;
+	 }
+	 
+	 
 	 
 
 }

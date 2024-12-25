@@ -14,6 +14,7 @@ public class GetProperties {
 		
 		System.out.println(p.getProperty("browser"));
 		System.out.println(p.getProperty("testurl"));
+		
 	}
 
 }
