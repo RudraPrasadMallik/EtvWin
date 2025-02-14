@@ -7,11 +7,18 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="TV007"/>
+          <include name="verifyUrl"/>
+          <include name="verifyHomeWinLogo"/>
+          <include name="screenshot"/>
           <include name="setUpHomePage"/>
-          <include name="TC004"/>
         </methods>
       </class> <!-- testcase.HomeTest -->
+      <class name="base.BaseTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- base.BaseTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

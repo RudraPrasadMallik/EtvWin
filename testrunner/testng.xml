@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
+<suite name="Etv Suite">
+
+  <!-- Test for Chrome -->
+  <test name="Chrome Test">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="base.BaseTest"/>
-      
+      <class name="testcase.HomeTest"/>
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test>
+
+  <!-- Test for Firefox -->
+  <test name="Firefox Test">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testcase.HomeTest"/>
+    </classes>
+  </test>
+
+  <!-- Test for Edge -->
+  <test name="Edge Test">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="testcase.HomeTest"/>
+    </classes>
+  </test>
+
+</suite>

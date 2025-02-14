@@ -1,11 +1,15 @@
 package testcase;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
-import org.apache.logging.log4j.Logger;
+
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
-import org.openqa.selenium.By;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -47,7 +51,7 @@ public class HomeTest extends BaseTest{
 	}
 		
 	
-//	@Test(priority =2)
+	@Test(priority =2)
 	public void verifyHomeWinLogo() {
 		 WebElement logo = homePage.winlogoHome();
 		 
@@ -66,7 +70,7 @@ public class HomeTest extends BaseTest{
 
 
 	
-	@Test(priority =3)
+//	@Test(priority =3)
 	 public void allicontentVisibilityonHome() {
         // Create a list of WebElements to verify dynamically
 	
@@ -104,8 +108,7 @@ public class HomeTest extends BaseTest{
         }
        
 	}
-	
-	@Test(priority=4)
+	//	@Test(priority=4)
 	public void TC004() {
 		 String movieName = BaseTest.prop.getProperty("movieName");
 		    
@@ -176,20 +179,34 @@ public class HomeTest extends BaseTest{
 		 
 	 }
 		
-	 @Test(priority =50)
+	// @Test(priority =50)
 		public void TC007() {
 		String plantxt = BaseTest.loc.getProperty("choose-plan-txt");
 		  logger.info(plantxt);
 		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        
-		 
-			
 			
 		}
-	
-	
-	
-	
+		
+		 @Test(priority = 8)
+		 public void screenshot() {
+			 
+			 System.out.println("8 is executed");
+			 
+			  File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			  File destination = new File("D:\\Screen shots\\screenshot.png");
+			  
+			  
+			  try {
+				  FileUtils.copyFile(screenshotFile,destination);
+				  logger.info("Screenshot executed"+ destination.getAbsolutePath());
+				
+			} catch (Exception e) {
+				logger.error("Not able to save the error");
+			}
+			  
+		 }
+		 
+		 
 	
 	
 

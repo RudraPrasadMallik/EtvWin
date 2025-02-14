@@ -64,3 +64,150 @@
 2024-12-25 12:33:02 INFO  [main] testcase.HomeTest - Clicked on Search Button
 2024-12-25 12:33:02 INFO  [main] testcase.HomeTest - Entered movie name: cha
 2024-12-25 12:33:08 INFO  [main] base.BaseTest - Browser driver closed.
+2024-12-26 14:25:45 INFO  [main] base.BaseTest - setUp Started
+2024-12-26 14:28:23 INFO  [main] base.BaseTest - setUp Started
+2024-12-26 14:28:47 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2024-12-26 14:28:48 INFO  [main] base.BaseTest - Browser driver closed.
+2024-12-26 14:40:01 INFO  [main] base.BaseTest - setUp Started
+2024-12-26 14:49:32 INFO  [main] base.BaseTest - setUp Started
+2024-12-26 14:50:03 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2024-12-26 14:50:04 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (cb9f68a7ef362db69fbf3193f1e86c0f)] -> xpath: //a[normalize-space()='Home']]
+2024-12-26 14:50:04 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (cb9f68a7ef362db69fbf3193f1e86c0f)] -> xpath: //a[normalize-space()='TV Shows']]
+2024-12-26 14:50:04 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (cb9f68a7ef362db69fbf3193f1e86c0f)] -> xpath: //a[normalize-space()='Movies']]
+2024-12-26 14:50:04 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (cb9f68a7ef362db69fbf3193f1e86c0f)] -> xpath: //a[normalize-space()='Watch Free']]
+2024-12-26 14:50:04 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (cb9f68a7ef362db69fbf3193f1e86c0f)] -> xpath: //a[normalize-space()='Live TV']]
+2024-12-26 14:50:04 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (cb9f68a7ef362db69fbf3193f1e86c0f)] -> xpath: //div[@class='links']//div//form[@class='search-bar']//div//div[@id='button-addon1']//*[name()='svg']]
+2024-12-26 14:50:04 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (cb9f68a7ef362db69fbf3193f1e86c0f)] -> xpath: //a[@class='button-color nav-link']]
+2024-12-26 14:50:04 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (cb9f68a7ef362db69fbf3193f1e86c0f)] -> xpath: //li[normalize-space()='Login']]
+2024-12-26 14:50:04 INFO  [main] testcase.HomeTest - Clicked on Search Button
+2024-12-26 14:50:04 INFO  [main] testcase.HomeTest - Entered movie name: cha
+2024-12-26 14:50:05 INFO  [main] base.BaseTest - Browser driver closed.
+2024-12-26 15:23:02 INFO  [main] base.BaseTest - setUp Started
+2024-12-26 15:23:21 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2024-12-26 15:23:22 INFO  [main] base.BaseTest - Browser driver closed.
+2024-12-26 15:25:02 INFO  [main] base.BaseTest - setUp Started
+2024-12-26 15:25:12 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2024-12-26 15:25:12 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (9027c1fa6376bddb8f06a6435758cf44)] -> xpath: //a[normalize-space()='Home']]
+2024-12-26 15:25:12 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (9027c1fa6376bddb8f06a6435758cf44)] -> xpath: //a[normalize-space()='TV Shows']]
+2024-12-26 15:25:12 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (9027c1fa6376bddb8f06a6435758cf44)] -> xpath: //a[normalize-space()='Movies']]
+2024-12-26 15:25:12 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (9027c1fa6376bddb8f06a6435758cf44)] -> xpath: //a[normalize-space()='Watch Free']]
+2024-12-26 15:25:12 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (9027c1fa6376bddb8f06a6435758cf44)] -> xpath: //a[normalize-space()='Live TV']]
+2024-12-26 15:25:12 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (9027c1fa6376bddb8f06a6435758cf44)] -> xpath: //div[@class='links']//div//form[@class='search-bar']//div//div[@id='button-addon1']//*[name()='svg']]
+2024-12-26 15:25:12 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (9027c1fa6376bddb8f06a6435758cf44)] -> xpath: //a[@class='button-color nav-link']]
+2024-12-26 15:25:12 INFO  [main] testcase.HomeTest - Element is visible: [[ChromeDriver: chrome on windows (9027c1fa6376bddb8f06a6435758cf44)] -> xpath: //li[normalize-space()='Login']]
+2024-12-26 15:25:12 INFO  [main] testcase.HomeTest - Clicked on Search Button
+2024-12-26 15:25:13 INFO  [main] testcase.HomeTest - Entered movie name: cha
+2024-12-26 15:25:13 INFO  [main] base.BaseTest - Browser driver closed.
+2024-12-26 16:16:44 INFO  [main] base.BaseTest - setUp Started
+2024-12-26 16:17:00 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2024-12-26 16:17:00 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2024-12-26 16:17:01 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2024-12-26 16:17:01 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2024-12-26 16:17:02 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2024-12-26 16:17:03 INFO  [main] base.BaseTest - Browser driver closed.
+2024-12-26 16:20:23 INFO  [main] base.BaseTest - setUp Started
+2024-12-26 16:20:28 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2024-12-26 16:20:28 INFO  [TestNG-test-Test-1] pageObjectmodel.Home - This is HomeTse getUrl
+2024-12-26 16:20:39 INFO  [TestNG-test-Test-1] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2024-12-26 16:20:39 INFO  [TestNG-test-Test-1] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2024-12-26 16:20:42 INFO  [TestNG-test-Test-1] pageObjectmodel.Home - Browser window maximized
+2024-12-26 16:20:42 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-14 10:53:46 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 10:54:03 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2025-02-14 10:54:03 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-14 10:54:03 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-14 10:54:03 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-14 10:54:03 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-14 10:54:06 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-14 10:54:37 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 10:54:41 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2025-02-14 10:54:41 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-14 10:54:46 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-14 10:54:46 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-14 10:54:46 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-14 10:54:47 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-14 11:51:24 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 11:51:38 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2025-02-14 11:51:38 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-14 11:51:38 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-14 11:51:38 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-14 11:51:40 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-14 11:51:41 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-14 11:59:10 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 11:59:17 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2025-02-14 11:59:17 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-14 11:59:21 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-14 11:59:21 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-14 11:59:22 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-14 11:59:22 ERROR [main] testcase.HomeTest - Not able to save the error
+2025-02-14 11:59:22 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-14 12:02:42 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 12:02:46 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2025-02-14 12:02:46 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-14 12:02:52 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-14 12:02:52 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-14 12:02:54 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-14 12:02:54 ERROR [main] testcase.HomeTest - Not able to save the error
+2025-02-14 12:02:54 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-14 12:09:39 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 12:09:51 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2025-02-14 12:09:51 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-14 12:09:51 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-14 12:09:51 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-14 12:09:52 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-14 12:09:52 INFO  [main] testcase.HomeTest - Screenshot executedD:\Screen shots\screenshot.png
+2025-02-14 12:09:52 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-14 14:41:24 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 14:41:39 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2025-02-14 14:41:39 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-14 14:41:40 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-14 14:41:40 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-14 14:41:41 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-14 14:41:41 INFO  [main] testcase.HomeTest - Screenshot executedD:\Screen shots\screenshot.png
+2025-02-14 14:41:41 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-14 14:52:59 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 14:53:22 INFO  [main] base.BaseTest - Edge browser is launched and navigate to URL.
+2025-02-14 14:53:22 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-14 14:53:22 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-14 14:53:22 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-14 14:53:23 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-14 14:53:23 INFO  [main] testcase.HomeTest - Screenshot executedD:\Screen shots\screenshot.png
+2025-02-14 14:53:25 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-14 14:54:04 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 14:54:20 INFO  [main] base.BaseTest - Firefox browser launched and navigated to URL.
+2025-02-14 14:54:20 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-14 14:54:20 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-14 14:54:20 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-14 14:54:20 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-14 14:54:21 INFO  [main] testcase.HomeTest - Screenshot executedD:\Screen shots\screenshot.png
+2025-02-14 14:54:25 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-14 15:32:41 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 15:32:41 ERROR [main] base.BaseTest - Browser not specified in config.properties
+2025-02-14 15:44:13 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 15:44:13 ERROR [main] base.BaseTest - Browser not specified in config.properties
+2025-02-14 16:06:59 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 16:06:59 ERROR [main] base.BaseTest - Browser not specified in config.properties
+2025-02-14 16:29:56 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 16:30:13 INFO  [main] base.BaseTest - Chrome browser launched and navigated to URL.
+2025-02-14 16:30:13 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-14 16:30:13 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-14 16:30:13 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-14 16:30:13 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-14 16:30:15 INFO  [main] testcase.HomeTest - Screenshot executedD:\Screen shots\screenshot.png
+2025-02-14 16:30:15 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-14 16:30:15 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 16:30:31 INFO  [main] base.BaseTest - Firefox browser launched and navigated to URL.
+2025-02-14 16:30:31 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-14 16:30:31 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-14 16:30:31 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-14 16:30:32 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-14 16:30:32 INFO  [main] testcase.HomeTest - Screenshot executedD:\Screen shots\screenshot.png
+2025-02-14 16:30:39 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-14 16:30:39 INFO  [main] base.BaseTest - setUp Started
+2025-02-14 16:30:56 INFO  [main] base.BaseTest - Edge browser is launched and navigate to URL.
+2025-02-14 16:30:56 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-14 16:30:56 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-14 16:30:56 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-14 16:30:56 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-14 16:30:57 INFO  [main] testcase.HomeTest - Screenshot executedD:\Screen shots\screenshot.png
+2025-02-14 16:30:59 INFO  [main] base.BaseTest - Browser driver closed.

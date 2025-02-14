@@ -85,9 +85,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -102,8 +104,9 @@ public class BaseTest {
     public static FileReader fr;
     public static FileReader fr1;
 
+    @Parameters({"browser"})
     @BeforeTest
-    public void setUp() throws IOException {
+    public void setUp(String browser) throws IOException {
         logger.info("setUp Started");
         
         if (driver == null) {
@@ -129,12 +132,12 @@ public class BaseTest {
             }
         }
         
-        String browser = prop.getProperty("browser");
-        if (browser == null) {
-            logger.error("Browser not specified in config.properties");
-            System.exit(1);
-        }
-        
+//       String browser = prop.getProperty("browser");
+//        if (browser == null) {
+//            logger.error("Browser not specified in config.properties");
+//            System.exit(1);
+//        }
+//        
         // Handle different browser configurations
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
@@ -146,7 +149,15 @@ public class BaseTest {
             driver = new FirefoxDriver();
             driver.get(loc.getProperty("main-Url"));
             logger.info("Firefox browser launched and navigated to URL.");
-        } else {
+        }
+        else if (browser.equalsIgnoreCase("edge")){
+        	WebDriverManager.edgedriver().setup();
+        	driver = new EdgeDriver();
+        	 driver.get(loc.getProperty("main-Url"));
+        	 logger.info("Edge browser is launched and navigate to URL.");
+        }
+        
+        else {
             logger.error("Unsupported browser specified: " + browser);
             System.exit(1);
         }
