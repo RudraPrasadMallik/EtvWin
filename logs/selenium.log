@@ -211,3 +211,189 @@
 2025-02-14 16:30:56 INFO  [main] pageObjectmodel.Home - Browser window maximized
 2025-02-14 16:30:57 INFO  [main] testcase.HomeTest - Screenshot executedD:\Screen shots\screenshot.png
 2025-02-14 16:30:59 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 09:53:31 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 09:53:44 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 09:54:09 INFO  [main] base.BaseTest - Firefox browser launched and navigated to URL.
+2025-02-15 09:54:09 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 09:54:09 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 09:54:09 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-15 09:54:09 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 09:54:10 INFO  [main] testcase.HomeTest - Screenshot executedD:\Screen shots\screenshot.png
+2025-02-15 09:54:14 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 09:54:14 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 09:54:30 INFO  [main] base.BaseTest - Edge browser is launched and navigate to URL.
+2025-02-15 09:54:30 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 09:54:30 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 09:54:30 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-15 09:54:32 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 09:54:33 INFO  [main] testcase.HomeTest - Screenshot executedD:\Screen shots\screenshot.png
+2025-02-15 09:54:35 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 10:54:34 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 10:54:43 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 10:55:09 INFO  [main] base.BaseTest - Firefox browser launched and navigated to URL.
+2025-02-15 10:55:09 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 10:55:09 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 10:55:09 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 10:55:09 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 10:55:15 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 10:55:15 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 10:55:30 INFO  [main] base.BaseTest - Edge browser is launched and navigate to URL.
+2025-02-15 10:55:30 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 10:55:30 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 10:55:30 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 10:55:32 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 10:55:32 INFO  [main] pageObjectmodel.Global - Screenshot executed and saved in this location: D:\Spring-Tool-Suit2\Etv-Win\null\screenshots\homeLogoVerification.png
+2025-02-15 10:55:36 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 11:13:08 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 11:13:16 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 11:13:35 INFO  [main] base.BaseTest - Firefox browser launched and navigated to URL.
+2025-02-15 11:13:35 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 11:13:35 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 11:13:35 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 11:13:36 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 11:13:41 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 11:13:41 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 11:13:56 INFO  [main] base.BaseTest - Edge browser is launched and navigate to URL.
+2025-02-15 11:13:56 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 11:13:56 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 11:13:56 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 11:13:57 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 11:14:01 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 11:33:12 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 11:39:08 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 11:39:10 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 11:39:20 INFO  [main] base.BaseTest - Firefox browser launched and navigated to URL.
+2025-02-15 11:39:20 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 11:39:20 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 11:39:20 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 11:39:20 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 11:39:26 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 11:39:26 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 11:39:35 INFO  [main] base.BaseTest - Edge browser is launched and navigate to URL.
+2025-02-15 11:39:35 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 11:39:35 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 11:39:35 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 11:39:36 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 11:39:36 INFO  [main] pageObjectmodel.Global - Screenshot executed and saved in this location: D:\Spring-Tool-Suit2\Etv-Win\null\screenshots\homeLogoVerification.png
+2025-02-15 11:39:36 INFO  [main] testcase.HomeTest - Element is visible: [[EdgeDriver: MicrosoftEdge on windows (01fc2ad967443cd438f06b9e6af02ced)] -> xpath: //a[normalize-space()='Home']]
+2025-02-15 11:39:36 INFO  [main] testcase.HomeTest - Element is visible: [[EdgeDriver: MicrosoftEdge on windows (01fc2ad967443cd438f06b9e6af02ced)] -> xpath: //a[normalize-space()='TV Shows']]
+2025-02-15 11:39:36 INFO  [main] testcase.HomeTest - Element is visible: [[EdgeDriver: MicrosoftEdge on windows (01fc2ad967443cd438f06b9e6af02ced)] -> xpath: //a[normalize-space()='Movies']]
+2025-02-15 11:39:36 INFO  [main] testcase.HomeTest - Element is visible: [[EdgeDriver: MicrosoftEdge on windows (01fc2ad967443cd438f06b9e6af02ced)] -> xpath: //a[normalize-space()='Watch Free']]
+2025-02-15 11:39:36 INFO  [main] testcase.HomeTest - Element is visible: [[EdgeDriver: MicrosoftEdge on windows (01fc2ad967443cd438f06b9e6af02ced)] -> xpath: //a[normalize-space()='Live TV']]
+2025-02-15 11:39:36 INFO  [main] testcase.HomeTest - Element is visible: [[EdgeDriver: MicrosoftEdge on windows (01fc2ad967443cd438f06b9e6af02ced)] -> xpath: //div[@class='links']//div//form[@class='search-bar']//div//div[@id='button-addon1']//*[name()='svg']]
+2025-02-15 11:39:37 INFO  [main] testcase.HomeTest - Element is visible: [[EdgeDriver: MicrosoftEdge on windows (01fc2ad967443cd438f06b9e6af02ced)] -> xpath: //a[@class='button-color nav-link']]
+2025-02-15 11:39:37 INFO  [main] testcase.HomeTest - Element is visible: [[EdgeDriver: MicrosoftEdge on windows (01fc2ad967443cd438f06b9e6af02ced)] -> xpath: //li[normalize-space()='Login']]
+2025-02-15 11:39:37 INFO  [main] testcase.HomeTest - Clicked on Search Button
+2025-02-15 11:39:38 INFO  [main] testcase.HomeTest - Entered movie name: cha
+2025-02-15 11:39:38 INFO  [main] testcase.HomeTest - Entered invalid movie name: SomeNonExistentMovie
+2025-02-15 11:39:40 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 12:19:40 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 12:19:46 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 12:19:58 INFO  [main] base.BaseTest - Firefox browser launched and navigated to URL.
+2025-02-15 12:19:58 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 12:19:58 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 12:19:58 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 12:19:58 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 12:20:10 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 12:20:10 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 12:20:27 INFO  [main] base.BaseTest - Edge browser is launched and navigate to URL.
+2025-02-15 12:20:27 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 12:20:27 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 12:20:27 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 12:20:28 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 12:20:28 INFO  [main] pageObjectmodel.Global - Screenshot executed and saved in this location: D:\Spring-Tool-Suit2\Etv-Win\null\screenshots\homeLogoVerification.png
+2025-02-15 12:20:28 INFO  [main] pageObjectmodel.Global - Screenshot executed and saved in this location: D:\Spring-Tool-Suit2\Etv-Win\null\screenshots\home-all-TabsPresentVerification..png
+2025-02-15 12:20:29 INFO  [main] testcase.HomeTest - Clicked on Search Button
+2025-02-15 12:20:29 INFO  [main] testcase.HomeTest - Entered invalid movie name: SomeNonExistentMovie
+2025-02-15 12:20:31 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 14:10:50 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 14:10:57 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 14:11:13 INFO  [main] base.BaseTest - Firefox browser launched and navigated to URL.
+2025-02-15 14:11:13 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 14:11:13 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 14:11:13 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 14:11:13 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 14:11:14 INFO  [main] pageObjectmodel.Global - Screenshot executed and saved in this location: D:\Spring-Tool-Suit2\Etv-Win\null\screenshots\homeLogoVerification.png
+2025-02-15 14:11:17 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 14:11:18 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 14:11:26 INFO  [main] base.BaseTest - Edge browser is launched and navigate to URL.
+2025-02-15 14:11:26 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 14:11:26 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 14:11:26 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 14:11:28 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 14:11:28 INFO  [main] pageObjectmodel.Global - Screenshot executed and saved in this location: D:\Spring-Tool-Suit2\Etv-Win\null\screenshots\homeLogoVerification.png
+2025-02-15 14:11:29 INFO  [main] pageObjectmodel.Global - Screenshot executed and saved in this location: D:\Spring-Tool-Suit2\Etv-Win\null\screenshots\home-all-TabsPresentVerification..png
+2025-02-15 14:11:29 INFO  [main] testcase.HomeTest -  allicontentVisibilityonHome has been executed
+2025-02-15 14:11:29 INFO  [main] testcase.HomeTest - Clicked on Search Button
+2025-02-15 14:11:30 INFO  [main] testcase.HomeTest - Entered invalid movie name: SomeNonExistentMovie
+2025-02-15 14:11:31 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 14:46:14 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 14:46:16 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 14:46:25 INFO  [main] base.BaseTest - Firefox browser launched and navigated to URL.
+2025-02-15 14:46:25 INFO  [main] testcase.HomeTest - Page is loaded
+2025-02-15 14:46:25 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 14:46:25 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 14:46:25 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 14:46:25 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 14:46:27 INFO  [main] testcase.HomeTest - Page is loaded
+2025-02-15 14:46:27 INFO  [main] pageObjectmodel.Global - Screenshot executed and saved in this location: D:\Spring-Tool-Suit2\Etv-Win\null\screenshots\homeLogoVerification.png
+2025-02-15 14:46:27 INFO  [main] testcase.HomeTest - Page is loaded
+2025-02-15 14:46:28 INFO  [main] pageObjectmodel.Global - Screenshot executed and saved in this location: D:\Spring-Tool-Suit2\Etv-Win\null\screenshots\home-all-TabsPresentVerification..png
+2025-02-15 14:46:28 INFO  [main] testcase.HomeTest -  allicontentVisibilityonHome has been executed
+2025-02-15 14:46:28 INFO  [main] testcase.HomeTest - Page is loaded
+2025-02-15 14:46:29 INFO  [main] testcase.HomeTest - Clicked on Search Button
+2025-02-15 14:46:29 INFO  [main] testcase.HomeTest - Page is loaded
+2025-02-15 14:46:29 INFO  [main] testcase.HomeTest - Entered invalid movie name: SomeNonExistentMovie
+2025-02-15 14:46:32 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 14:46:32 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 14:46:42 INFO  [main] base.BaseTest - Edge browser is launched and navigate to URL.
+2025-02-15 14:46:42 INFO  [main] testcase.HomeTest - Page is loaded
+2025-02-15 14:46:42 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 14:46:42 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 14:46:42 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 14:46:43 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 14:46:43 INFO  [main] testcase.HomeTest - Page is loaded
+2025-02-15 14:46:43 INFO  [main] pageObjectmodel.Global - Screenshot executed and saved in this location: D:\Spring-Tool-Suit2\Etv-Win\null\screenshots\homeLogoVerification.png
+2025-02-15 14:46:43 INFO  [main] testcase.HomeTest - Page is loaded
+2025-02-15 14:46:43 INFO  [main] pageObjectmodel.Global - Screenshot executed and saved in this location: D:\Spring-Tool-Suit2\Etv-Win\null\screenshots\home-all-TabsPresentVerification..png
+2025-02-15 14:46:43 INFO  [main] testcase.HomeTest -  allicontentVisibilityonHome has been executed
+2025-02-15 14:46:43 INFO  [main] testcase.HomeTest - Page is loaded
+2025-02-15 14:46:43 INFO  [main] testcase.HomeTest - Clicked on Search Button
+2025-02-15 14:46:43 INFO  [main] testcase.HomeTest - Page is loaded
+2025-02-15 14:46:44 INFO  [main] testcase.HomeTest - Entered invalid movie name: SomeNonExistentMovie
+2025-02-15 14:46:46 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 14:54:34 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 14:54:38 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 14:54:51 INFO  [main] base.BaseTest - Firefox browser launched and navigated to URL.
+2025-02-15 14:54:51 INFO  [main] base.BaseTest - Page is loaded
+2025-02-15 14:54:51 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 14:54:51 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 14:54:51 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 14:54:51 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 14:54:54 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 14:54:54 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 14:55:02 INFO  [main] base.BaseTest - Edge browser is launched and navigate to URL.
+2025-02-15 14:55:02 INFO  [main] base.BaseTest - Page is loaded
+2025-02-15 14:55:02 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 14:55:02 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 14:55:02 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 14:55:02 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 14:55:03 INFO  [main] pageObjectmodel.Global - Screenshot executed and saved in this location: D:\Spring-Tool-Suit2\Etv-Win\null\screenshots\home-all-TabsPresentVerification..png
+2025-02-15 14:55:03 INFO  [main] testcase.HomeTest -  allicontentVisibilityonHome has been executed
+2025-02-15 14:55:03 INFO  [main] testcase.HomeTest - Clicked on Search Button
+2025-02-15 14:55:04 INFO  [main] testcase.HomeTest - Entered invalid movie name: SomeNonExistentMovie
+2025-02-15 14:55:05 INFO  [main] base.BaseTest - Browser driver closed.
+2025-02-15 15:30:16 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 15:30:19 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 15:30:20 INFO  [main] base.BaseTest - setUp Started
+2025-02-15 15:30:36 INFO  [main] base.BaseTest - Edge browser is launched and navigate to URL.
+2025-02-15 15:30:36 INFO  [main] base.BaseTest - Page is loaded
+2025-02-15 15:30:36 INFO  [main] pageObjectmodel.Home - This is HomeTse getUrl
+2025-02-15 15:30:36 INFO  [main] testcase.HomeTest - This is the URL:https://prodweb.etvwin.com:3000/home
+2025-02-15 15:30:36 INFO  [main] testcase.HomeTest - Url is: https://prodweb.etvwin.com:3000/home
+2025-02-15 15:30:37 INFO  [main] pageObjectmodel.Home - Browser window maximized
+2025-02-15 15:30:37 INFO  [main] pageObjectmodel.Global - Screenshot executed and saved in this location: D:\Spring-Tool-Suit2\Etv-Win\null\screenshots\homeLogoVerification.png
+2025-02-15 15:30:38 INFO  [main] pageObjectmodel.Global - Screenshot executed and saved in this location: D:\Spring-Tool-Suit2\Etv-Win\null\screenshots\home-all-TabsPresentVerification..png
+2025-02-15 15:30:38 INFO  [main] testcase.HomeTest -  allicontentVisibilityonHome has been executed
+2025-02-15 15:30:38 INFO  [main] testcase.HomeTest - https://prodweb.etvwin.com:3000/home
+2025-02-15 15:30:40 INFO  [main] base.BaseTest - Browser driver closed.

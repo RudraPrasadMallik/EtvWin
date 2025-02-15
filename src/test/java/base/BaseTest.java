@@ -79,14 +79,17 @@ package base;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -100,18 +103,26 @@ public class BaseTest {
     
     public static WebDriver driver;
     public static Properties prop = new Properties();
-    public static Properties loc = new Properties();
+    public static Properties loc  = new Properties();
+    public static Properties cont = new Properties();
     public static FileReader fr;
     public static FileReader fr1;
+    public static FileReader fr2;
 
     @Parameters({"browser"})
     @BeforeTest
     public void setUp(String browser) throws IOException {
+//    	 if (browser == null || browser.isEmpty()) {
+//             
+//             browser = "chrome";
+//         }
+    	 
         logger.info("setUp Started");
         
         if (driver == null) {
             String configFilePath = System.getProperty("user.dir") + "\\src\\test\\resources\\config\\config.properties";
             String locatorsFilePath = System.getProperty("user.dir") + "\\src\\test\\resources\\config\\locators.properties";
+            String contanteFilePath = System.getProperty("user.dir")+ "\\src\\test\\resources\\config\\content.properties";
             
             File configFile = new File(configFilePath);
             File locatorsFile = new File(locatorsFilePath);
@@ -137,24 +148,41 @@ public class BaseTest {
 //            logger.error("Browser not specified in config.properties");
 //            System.exit(1);
 //        }
-//        
+
+        
         // Handle different browser configurations
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.get(loc.getProperty("main-Url"));
             logger.info("Chrome browser launched and navigated to URL.");
+            
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+            wait.until(driver -> js.executeScript("return document.readyState").equals("complete"));
+            logger.info("Page is loaded");
+            
         } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
             driver.get(loc.getProperty("main-Url"));
             logger.info("Firefox browser launched and navigated to URL.");
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+            wait.until(driver -> js.executeScript("return document.readyState").equals("complete"));
+            logger.info("Page is loaded");
         }
-        else if (browser.equalsIgnoreCase("edge")){
+        
+        else if (browser.equalsIgnoreCase("edge"))
+        {
         	WebDriverManager.edgedriver().setup();
         	driver = new EdgeDriver();
         	 driver.get(loc.getProperty("main-Url"));
         	 logger.info("Edge browser is launched and navigate to URL.");
+        	 JavascriptExecutor js = (JavascriptExecutor) driver;
+	            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	            wait.until(driver -> js.executeScript("return document.readyState").equals("complete"));
+	            logger.info("Page is loaded");
         }
         
         else {
@@ -165,6 +193,7 @@ public class BaseTest {
 
     @AfterTest
     public void tearDown() {
+    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         if (driver != null) {
             driver.quit();  // Properly quit the driver after test
             logger.info("Browser driver closed.");

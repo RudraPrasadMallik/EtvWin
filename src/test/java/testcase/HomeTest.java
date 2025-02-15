@@ -1,15 +1,12 @@
 package testcase;
 
-import java.io.File;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,6 +15,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
+import pageObjectmodel.Global;
 import pageObjectmodel.Home;
 
 public class HomeTest extends BaseTest{
@@ -27,10 +25,11 @@ public class HomeTest extends BaseTest{
 	 Home homePage;
 	 
 	 @BeforeMethod
-	    public void setUpHomePage() {
-	        
+	    public void setUpHomePage() 
+	 {  
 	        homePage = new Home(driver);
-	    }
+	        
+	  }
 	 
 	 
 	@Test(priority =1)
@@ -41,7 +40,7 @@ public class HomeTest extends BaseTest{
 	    logger.info("This is the URL:"+url);
 		if(url.equals(url1)) {
 			
-			logger.info(url1);
+			logger.info("Url is: "+url1);
 		}
 		else {
 		  logger.error("This Url is not matching");
@@ -53,62 +52,77 @@ public class HomeTest extends BaseTest{
 	
 	@Test(priority =2)
 	public void verifyHomeWinLogo() {
-		 WebElement logo = homePage.winlogoHome();
-		 
-		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));  
+		   WebElement logo = homePage.winlogoHome();
+
+		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		    wait.until(ExpectedConditions.visibilityOf(logo));
-	    
-	    Assert.assertTrue(logo.isDisplayed(), "Home logo is not displaying.");
-	    
-	    org.openqa.selenium.Point position = logo.getLocation();
-	    int x = position.getX();
-	    int y = position.getY();
-	    System.out.println("Logo is located at X: " + x + ", Y: " + y);
-	    Assert.assertTrue(x >= 0, "Logo X position is invalid.");
-	    Assert.assertTrue(y >= 0, "Logo Y position is invalid.");
+
+		    try {
+		        Assert.assertTrue(logo.isDisplayed(), "Home logo is not displaying.");
+		        
+		        Global.takescreenshot(driver, "homeLogoVerification");
+
+		        org.openqa.selenium.Point position = logo.getLocation();
+		        int x = position.getX();
+		        int y = position.getY();
+		        System.out.println("Logo is located at X: " + x + ", Y: " + y);
+		        Assert.assertTrue(x >= 0, "Logo X position is invalid.");
+		        Assert.assertTrue(y >= 0, "Logo Y position is invalid.");
+		        
+		    } catch (AssertionError e) {
+		      
+		        logger.error("Logo is not displayed. Taking screenshot.");
+		        Global.takescreenshot(driver, "homeLogoNotDisplayed");
+		        throw e; 
+		    }
+		    
 	}
-
-
 	
-//	@Test(priority =3)
+
+   	@Test(priority =3)
 	 public void allicontentVisibilityonHome() {
-        // Create a list of WebElements to verify dynamically
-	
-        List<WebElement> elementsToVerify = Arrays.asList(
-            homePage.homeTab(),
-            homePage.tvShowsTab(),
-            homePage.moviesTab(),
-            homePage.watchFreeTab(),
-            homePage.liveTvTab(),
-            homePage.searchButton(),
-            homePage.subscribeButton(),
-            homePage.loginButton()
-        );
+    
+   		WebElement element = homePage.homeTab();
+    		  
+   		
+//     List<WebElement> elementsToVerify = Arrays.asList(
+//            homePage.homeTab(),
+//            homePage.tvShowsTab(),
+//            homePage.moviesTab(),
+//            homePage.watchFreeTab(),
+//            homePage.liveTvTab(),
+//            homePage.searchButton(),
+//            homePage.subscribeButton(),
+//            homePage.loginButton()
+//        );
 
-        // WebDriverWait to wait for visibility of elements
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOf(element));
+        Global.takescreenshot(driver, "home-all-TabsPresentVerification.");
+        logger.info(" allicontentVisibilityonHome has been executed");
         
-        // Iterate through the list and verify the visibility of each element
-        for (WebElement element : elementsToVerify) {
-            try {
-                // Wait for the element to be visible
-                wait.until(ExpectedConditions.visibilityOf(element));
-                
-                // If visible, log success
-                if (element.isDisplayed()) {
-                    logger.info("Element is visible: " + element);
-                } else {
-                    logger.warn("Element is not visible (but is in DOM): " + element);
-                }
-            } catch (Exception e) {
-                // Catch any exception (e.g., element not found, not visible, etc.)
-                logger.error("Element not found or not visible: " + element, e);
-            }
-            
-        }
-       
+      
+//        for (WebElement element : elementsToVerify) {
+//            try {
+//               
+//                wait.until(ExpectedConditions.visibilityOf(element));
+//                
+//               
+//                if (element.isDisplayed()) {
+//                    logger.info("Element is visible: " + element);
+//                } else {
+//                    logger.warn("Element is not visible (but is in DOM): " + element);
+//                }
+//            } catch (Exception e) {
+//                
+//                logger.error("Element not found or not visible: " + element, e);
+//            }   
+//        }
+        
 	}
-	//	@Test(priority=4)
+	 
+	 
+	//@Test(priority=4)
 	public void TC004() {
 		 String movieName = BaseTest.prop.getProperty("movieName");
 		    
@@ -130,6 +144,7 @@ public class HomeTest extends BaseTest{
 	}
 	
 	
+	//@Test(priority=5)
 	public void TC005() {
 	
 		    String invalidMovieName = "SomeNonExistentMovie";
@@ -158,7 +173,7 @@ public class HomeTest extends BaseTest{
 		}
 	
 	
- 
+	@Test(priority=6)
 	 public void TC006() {
 		 WebElement subscribe = homePage.subscribeButton();
 		 
@@ -179,6 +194,21 @@ public class HomeTest extends BaseTest{
 		 
 	 }
 		
+	
+	@Test(priority=7)
+	public void scrollDown() {
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		 js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+		 logger.info("Page is scrolled down");
+	}
+	
+	
+	
+	
+	
+	
+	
 	// @Test(priority =50)
 		public void TC007() {
 		String plantxt = BaseTest.loc.getProperty("choose-plan-txt");
@@ -187,26 +217,8 @@ public class HomeTest extends BaseTest{
 			
 		}
 		
-		 @Test(priority = 8)
-		 public void screenshot() {
-			 
-			 System.out.println("8 is executed");
-			 
-			  File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			  File destination = new File("D:\\Screen shots\\screenshot.png");
-			  
-			  
-			  try {
-				  FileUtils.copyFile(screenshotFile,destination);
-				  logger.info("Screenshot executed"+ destination.getAbsolutePath());
-				
-			} catch (Exception e) {
-				logger.error("Not able to save the error");
-			}
-			  
-		 }
 		 
-		 
+	 
 	
 	
 

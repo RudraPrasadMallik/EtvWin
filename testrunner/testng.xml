@@ -18,12 +18,11 @@
     </classes>
   </test>
 
-  <!-- Test for Edge -->
   <test name="Edge Test">
     <parameter name="browser" value="edge"/>
     <classes>
       <class name="testcase.HomeTest"/>
     </classes>
-  </test>
+  </test> 
 
 </suite>

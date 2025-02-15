@@ -3,22 +3,24 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcase.HomeTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="verifyUrl"/>
-          <include name="verifyHomeWinLogo"/>
-          <include name="screenshot"/>
-          <include name="setUpHomePage"/>
-        </methods>
-      </class> <!-- testcase.HomeTest -->
       <class name="base.BaseTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- base.BaseTest -->
+      <class name="testcase.HomeTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyUrl"/>
+          <include name="verifyHomeWinLogo"/>
+          <include name="TC005"/>
+          <include name="setUpHomePage"/>
+          <include name="TC004"/>
+          <include name="allicontentVisibilityonHome"/>
+        </methods>
+      </class> <!-- testcase.HomeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
