@@ -14,7 +14,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import base.BaseTest;
+import com.etvwin.runner.BaseTest;
+
 import pageObjectmodel.Global;
 import pageObjectmodel.Home;
 
