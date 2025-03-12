@@ -3,7 +3,7 @@ package com.etvwin.utility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
-import com.etvwin.listner.WebDriverListener;
+import com.etvwin.listner.WebDriverEventHandler;
 
 
 
@@ -11,7 +11,7 @@ public class DriverManager {
 	private static DriverManager driverManager;
 	private static ThreadLocal<WebDriver> tDriver = new ThreadLocal<>();
 	private static ThreadLocal<EventFiringWebDriver> tEventFiringWebDriver = new ThreadLocal<>();
-	private static ThreadLocal<WebDriverListener> tWebDriverListener = new ThreadLocal<>();
+	private static ThreadLocal<WebDriverEventHandler> tWebDriverListener = new ThreadLocal<>();
 
 	
 
@@ -41,12 +41,12 @@ public class DriverManager {
 		return driver;
 	}
 	
-	public synchronized void setWebDriverListener (WebDriverListener listener) {
+	public synchronized void setWebDriverListener (WebDriverEventHandler listener) {
 		tWebDriverListener.set(listener);
 	}
 
-	public synchronized WebDriverListener getWebDriverListener () {
-		WebDriverListener listener = tWebDriverListener.get();
+	public synchronized WebDriverEventHandler getWebDriverListener () {
+		WebDriverEventHandler listener = tWebDriverListener.get();
 		if (listener == null) {
 			throw new IllegalStateException("WebDriverListener should have not been null!!");
 		}

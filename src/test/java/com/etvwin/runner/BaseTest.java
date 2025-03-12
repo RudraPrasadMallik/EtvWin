@@ -5,26 +5,30 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.concurrent.TimeUnit;
+
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
+
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
-import com.etvwin.listner.WebDriverListener;
+import com.etvwin.listner.WebDriverEventHandler;
 import com.etvwin.utility.AllureConfigurator;
 import com.etvwin.utility.ConfigReader;
 import com.etvwin.utility.DriverManager;
 import com.etvwin.utility.ReportManager;
 import com.etvwin.utility.ScreenshotUtility;
+
+import org.openqa.selenium.support.events.EventFiringDecorator;
+import org.openqa.selenium.support.events.WebDriverListener;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Attachment;
@@ -41,40 +45,41 @@ public class BaseTest {
 		launchBrowser(ConfigReader.getProperty("appUrl"));
 	}
 	
-	@AfterMethod (alwaysRun = true)
-	public void browserTeardown(ITestResult result) {
-		WebDriver driver = DriverManager.getInstance().getDriver();
-		String testCaseName = result.getMethod().getConstructorOrMethod().getName();
-		if(result.getStatus() == ITestResult.FAILURE) {
-			saveTextLog(testCaseName+" Failed, Please find the attached screenshot");
-			saveScreenshot(driver);	
-			String imageFilePath = ScreenshotUtility.takeFullScreenShot(driver, testCaseName+"_Failed");
-			ReportManager.getTest().fail("Screenshot", MediaEntityBuilder.createScreenCaptureFromPath(imageFilePath).build());
-		}
-		DriverManager.getInstance().getEventFiringWebDriver().unregister(DriverManager.getInstance().getWebDriverListener());
-		closeBrowser(driver);
-	}
+	 @AfterMethod(alwaysRun = true)
+	    public void browserTeardown(ITestResult result) {
+	        WebDriver driver = DriverManager.getInstance().getDriver();
+	        String testCaseName = result.getMethod().getConstructorOrMethod().getName();
+	        if (result.getStatus() == ITestResult.FAILURE) {
+	            saveTextLog(testCaseName + " Failed, Please find the attached screenshot");
+	            saveScreenshot(driver);
+	            String imageFilePath = ScreenshotUtility.takeFullScreenShot(driver, testCaseName + "_Failed");
+	            ReportManager.getTest().fail("Screenshot", MediaEntityBuilder.createScreenCaptureFromPath(imageFilePath).build());
+	        }
+	        closeBrowser(driver);
+	    }
 	
 	
 	
-	public WebDriver launchBrowser(String url){
-		System.out.println("Launching Browser.");
-		WebDriverManager.chromedriver().arch32().setup();
-		ChromeOptions option = new ChromeOptions();
-		option.addArguments("--disable-infobars");
-		option.addArguments("--incognito");
-		WebDriver driver = new ChromeDriver(option);
-		EventFiringWebDriver eventHandler = new EventFiringWebDriver(driver);
-		WebDriverListener listener = new WebDriverListener();
-		eventHandler.register(listener);
-		driver = eventHandler;
-		DriverManager.getInstance().setWebDriverListener(listener);
-		DriverManager.getInstance().setEventFiringWebDriver(eventHandler);
-		DriverManager.getInstance().setDriver(driver);
-		driver.get(url);
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigReader.getProperty("implicitlyWaitTime")),TimeUnit.SECONDS);
-		return driver;
+	 public WebDriver launchBrowser(String url) {
+	        System.out.println("Launching Browser.");
+
+	        // Set up ChromeDriver
+	        WebDriverManager.chromedriver().setup();
+	        ChromeOptions options = new ChromeOptions();
+	        options.addArguments("--disable-infobars");
+	        options.addArguments("--incognito");
+	        WebDriver baseDriver = new ChromeDriver(options);
+
+	        // Register WebDriverListener properly
+	        WebDriverListener listener = new WebDriverEventHandler();  // Use your custom listener
+	        WebDriver driver = new EventFiringDecorator<>(listener).decorate(baseDriver);
+
+	        // Perform browser setup
+	        driver.get(url);
+	        driver.manage().window().maximize();
+
+	        return driver;
+	    
 	}
 	
 	
@@ -93,6 +98,7 @@ public class BaseTest {
 		public static String saveTextLog(String message) {
 			return message;
 		}
+		
 
 		// HTML attachments for Allure
 		@Attachment(value = "{0}", type = "text/html")
@@ -100,12 +106,12 @@ public class BaseTest {
 			return html;
 		}
 
+		
 		// Video attachments for Allure
 		@Attachment(value = "video",type="video/webm")
 		public byte[] attachVideo(String path) throws Exception {
 		    return Files.readAllBytes(Paths.get(new File(path).getAbsolutePath()));
 		}
+		
 
-	
-	
 }
