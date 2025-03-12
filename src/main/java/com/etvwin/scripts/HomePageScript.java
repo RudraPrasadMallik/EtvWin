@@ -17,8 +17,6 @@ public class HomePageScript {
 	private HomePageModule homePageModule;
 	
 	
-	
-	
 	public HomePageScript(WebDriver driver) {
 		this.driver=driver;
 		homePageModule = new HomePageModule(driver);
@@ -44,5 +42,4 @@ public class HomePageScript {
 		
 	}
 	
-
 }

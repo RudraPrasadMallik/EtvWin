@@ -2,10 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="EtvWin Suite">
     
-    <!-- Listeners -->
-    <listeners>
-        <listener class-name="com.etvwin.listener.RetryListener" />
-    </listeners>
+   
 
     <!-- Test Definition -->
     <test name="Automation Test">
