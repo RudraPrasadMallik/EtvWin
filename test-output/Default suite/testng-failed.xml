@@ -3,24 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="base.BaseTest">
+      <class name="com.etvwin.runner.TestRunner">
         <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="Tc001_VerifyHomePAge"/>
+          <include name="configuringLog4j"/>
+          <include name="browserSetup"/>
         </methods>
-      </class> <!-- base.BaseTest -->
-      <class name="testcase.HomeTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="verifyUrl"/>
-          <include name="verifyHomeWinLogo"/>
-          <include name="TC005"/>
-          <include name="setUpHomePage"/>
-          <include name="TC004"/>
-          <include name="allicontentVisibilityonHome"/>
-        </methods>
-      </class> <!-- testcase.HomeTest -->
+      </class> <!-- com.etvwin.runner.TestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -8,12 +8,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
+import com.etvwin.utility.ElementOperations;
+
 
 public class HomePageObject {
+	private WebDriver driver;
+    private ElementOperations elementOps;
 	
   public HomePageObject(WebDriver driver) {
+	  this.driver = driver;
 	  PageFactory.initElements(new  AjaxElementLocatorFactory(driver,10), this);
+	  this.elementOps = new ElementOperations(driver);
   }
+ 
 	
   // To get all the dynamic sections names
    @FindBy(xpath="//h2[normalize-space()]")
@@ -27,6 +34,7 @@ public class HomePageObject {
    @FindBy(xpath = "//div[contains(@class,'content-item')]")
    private List<WebElement> contentItems;
    
+ 
    // To get the number of sections are available
    public int getTotalSections() {
 	   return sectionTitles.size();
