@@ -48,6 +48,7 @@ public class BaseTest {
 	 @AfterMethod(alwaysRun = true)
 	    public void browserTeardown(ITestResult result) {
 	        WebDriver driver = DriverManager.getInstance().getDriver();
+	                  System.out.println(driver);
 	        String testCaseName = result.getMethod().getConstructorOrMethod().getName();
 	        if (result.getStatus() == ITestResult.FAILURE) {
 	            saveTextLog(testCaseName + " Failed, Please find the attached screenshot");
@@ -61,7 +62,7 @@ public class BaseTest {
 	
 	
 	 public WebDriver launchBrowser(String url) {
-	        System.out.println("Launching Browser.");
+	       
 
 	        // Set up ChromeDriver
 	        WebDriverManager.chromedriver().setup();
@@ -71,22 +72,35 @@ public class BaseTest {
 	        WebDriver baseDriver = new ChromeDriver(options);
 
 	        // Register WebDriverListener properly
-	        WebDriverListener listener = new WebDriverEventHandler();  // Use your custom listener
+	        WebDriverListener listener = new WebDriverEventHandler();
 	        WebDriver driver = new EventFiringDecorator<>(listener).decorate(baseDriver);
-
+	        
+            //Saving the driver instance
+	        DriverManager.getInstance().setDriver(driver);
+	        DriverManager.getInstance().setWebDriverListener((WebDriverEventHandler) listener);
 	        // Perform browser setup
 	        driver.get(url);
 	        driver.manage().window().maximize();
-
+	        System.out.println("Launching Browser.");
 	        return driver;
 	    
 	}
 	
 	
+	 
+	 
+	 
+	 
 	public void closeBrowser(WebDriver driver){
 		System.out.println("Closing Browser.");
 		driver.quit();
 	}
+	
+	
+	
+	
+	
+	
 	// Image attachments for Allure
 		@Attachment(value = "Page screenshot", type = "image/png")
 		public byte[] saveScreenshot(WebDriver driver) {
