@@ -20,7 +20,6 @@ public class HomePageScript {
 	public HomePageScript(WebDriver driver) {
 		this.driver=driver;
 		homePageModule = new HomePageModule(driver);
-		
 	}
 	
 	

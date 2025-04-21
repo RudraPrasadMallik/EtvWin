@@ -18,7 +18,6 @@ public class TestRunner extends BaseTest {
 	@Test(priority = 1)
 	public void Tc001_VerifyHomePAge() {
 		String testCaseName = new Object(){}.getClass().getEnclosingMethod().getName();
-		System.out.println("This is inside Testcase1");
 		HomePageScript homePageScript = new HomePageScript(DriverManager.getInstance().getDriver());
 		homePageScript.verifySectionsOnHomePage(testCaseName);
 		

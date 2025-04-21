@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-08T15:05:32 IST" name="Default suite" finished-at="2025-04-08T15:05:42 IST" duration-ms="9434">
+  <suite started-at="2025-04-21T14:25:45 IST" name="EtvWin Suite" finished-at="2025-04-21T14:29:27 IST" duration-ms="222061">
     <groups>
     </groups>
-    <test started-at="2025-04-08T15:05:32 IST" name="Default test" finished-at="2025-04-08T15:05:42 IST" duration-ms="9434">
-      <class name="com.etvwin.runner.BaseTest">
-        <test-method is-config="true" signature="configuringLog4j()[pri:0, instance:com.etvwin.runner.BaseTest@49b07ee3]" started-at="2025-04-08T15:05:32 IST" name="configuringLog4j" finished-at="2025-04-08T15:05:32 IST" duration-ms="67" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- configuringLog4j -->
-      </class> <!-- com.etvwin.runner.BaseTest -->
+    <test started-at="2025-04-21T14:25:45 IST" name="Chrome Test" finished-at="2025-04-21T14:26:53 IST" duration-ms="68255">
       <class name="com.etvwin.runner.TestRunner">
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:com.etvwin.runner.TestRunner@4564e94b]" started-at="2025-04-08T15:05:32 IST" name="browserSetup" finished-at="2025-04-08T15:05:40 IST" duration-ms="7650" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserSetup -->
-        <test-method signature="Tc001_VerifyHomePAge()[pri:1, instance:com.etvwin.runner.TestRunner@4564e94b]" started-at="2025-04-08T15:05:40 IST" name="Tc001_VerifyHomePAge" finished-at="2025-04-08T15:05:41 IST" duration-ms="1389" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc001_VerifyHomePAge -->
-        <test-method is-config="true" signature="browserTeardown(org.testng.ITestResult)[pri:0, instance:com.etvwin.runner.TestRunner@4564e94b]" started-at="2025-04-08T15:05:41 IST" name="browserTeardown" finished-at="2025-04-08T15:05:42 IST" duration-ms="244" status="PASS">
+        <test-method is-config="true" signature="browserSetup(java.lang.String)[pri:0, instance:com.etvwin.runner.TestRunner@71154f21]" started-at="2025-04-21T14:25:45 IST" name="browserSetup" finished-at="2025-04-21T14:26:49 IST" duration-ms="63585" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Tc001_VerifyHomePAge status=SUCCESS method=TestRunner.Tc001_VerifyHomePAge()[pri:1, instance:com.etvwin.runner.TestRunner@4564e94b] output={null}]]]>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="Tc001_VerifyHomePAge()[pri:1, instance:com.etvwin.runner.TestRunner@71154f21]" started-at="2025-04-21T14:26:49 IST" name="Tc001_VerifyHomePAge" finished-at="2025-04-21T14:26:52 IST" duration-ms="3838" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc001_VerifyHomePAge -->
+        <test-method is-config="true" signature="browserTeardown(org.testng.ITestResult)[pri:0, instance:com.etvwin.runner.TestRunner@71154f21]" started-at="2025-04-21T14:26:52 IST" name="browserTeardown" finished-at="2025-04-21T14:26:53 IST" duration-ms="706" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Tc001_VerifyHomePAge status=SUCCESS method=TestRunner.Tc001_VerifyHomePAge()[pri:1, instance:com.etvwin.runner.TestRunner@71154f21] output={null}]]]>
               </value>
             </param>
           </params>
@@ -33,6 +34,70 @@
           </reporter-output>
         </test-method> <!-- browserTeardown -->
       </class> <!-- com.etvwin.runner.TestRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Chrome Test -->
+    <test started-at="2025-04-21T14:26:53 IST" name="Fireox Test" finished-at="2025-04-21T14:28:34 IST" duration-ms="101234">
+      <class name="com.etvwin.runner.TestRunner">
+        <test-method is-config="true" signature="browserSetup(java.lang.String)[pri:0, instance:com.etvwin.runner.TestRunner@64a896b0]" started-at="2025-04-21T14:26:53 IST" name="browserSetup" finished-at="2025-04-21T14:28:24 IST" duration-ms="90967" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="Tc001_VerifyHomePAge()[pri:1, instance:com.etvwin.runner.TestRunner@64a896b0]" started-at="2025-04-21T14:28:24 IST" name="Tc001_VerifyHomePAge" finished-at="2025-04-21T14:28:26 IST" duration-ms="2030" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc001_VerifyHomePAge -->
+        <test-method is-config="true" signature="browserTeardown(org.testng.ITestResult)[pri:0, instance:com.etvwin.runner.TestRunner@64a896b0]" started-at="2025-04-21T14:28:26 IST" name="browserTeardown" finished-at="2025-04-21T14:28:34 IST" duration-ms="8195" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Tc001_VerifyHomePAge status=SUCCESS method=TestRunner.Tc001_VerifyHomePAge()[pri:1, instance:com.etvwin.runner.TestRunner@64a896b0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserTeardown -->
+      </class> <!-- com.etvwin.runner.TestRunner -->
+    </test> <!-- Fireox Test -->
+    <test started-at="2025-04-21T14:28:34 IST" name="EdgeTest" finished-at="2025-04-21T14:29:27 IST" duration-ms="52515">
+      <class name="com.etvwin.runner.TestRunner">
+        <test-method is-config="true" signature="configuringLog4j()[pri:0, instance:com.etvwin.runner.TestRunner@11a82d0f]" started-at="2025-04-21T14:25:45 IST" name="configuringLog4j" finished-at="2025-04-21T14:25:45 IST" duration-ms="86" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuringLog4j -->
+        <test-method is-config="true" signature="browserSetup(java.lang.String)[pri:0, instance:com.etvwin.runner.TestRunner@11a82d0f]" started-at="2025-04-21T14:28:34 IST" name="browserSetup" finished-at="2025-04-21T14:29:24 IST" duration-ms="49902" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="Tc001_VerifyHomePAge()[pri:1, instance:com.etvwin.runner.TestRunner@11a82d0f]" started-at="2025-04-21T14:29:24 IST" name="Tc001_VerifyHomePAge" finished-at="2025-04-21T14:29:26 IST" duration-ms="1263" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc001_VerifyHomePAge -->
+        <test-method is-config="true" signature="browserTeardown(org.testng.ITestResult)[pri:0, instance:com.etvwin.runner.TestRunner@11a82d0f]" started-at="2025-04-21T14:29:26 IST" name="browserTeardown" finished-at="2025-04-21T14:29:27 IST" duration-ms="1227" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Tc001_VerifyHomePAge status=SUCCESS method=TestRunner.Tc001_VerifyHomePAge()[pri:1, instance:com.etvwin.runner.TestRunner@11a82d0f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserTeardown -->
+      </class> <!-- com.etvwin.runner.TestRunner -->
+    </test> <!-- EdgeTest -->
+  </suite> <!-- EtvWin Suite -->
 </testng-results>
