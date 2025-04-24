@@ -10,8 +10,6 @@ import com.etvwin.utility.ElementOperations;
 import com.etvwin.utility.Log;
 import com.etvwin.utility.ElementOperations;
 
-
-
 public class WebDriverEventHandler implements WebDriverListener {
 	private String value;
 
@@ -31,6 +29,10 @@ public class WebDriverEventHandler implements WebDriverListener {
 	public void afterClickOn(WebElement element, WebDriver driver) {
 		
 	}
+	public void afterClick(WebElement element, WebDriver driver) {
+		
+	}	
+
 
 	public void afterFindBy(By by, WebElement element, WebDriver driver) {
 		
@@ -57,7 +59,10 @@ public class WebDriverEventHandler implements WebDriverListener {
 		Log.info("Refreshed the current page");
 	}
 
-	public void afterNavigateTo(String url, WebDriver driver) {
+	public void afterNavigateTo(String url, WebDriver driver) {}
+
+	public void afterNavigateTo(WebDriver driver, String url) {
+
 		System.out.println("Navigated to: "+url);		
 	}
 

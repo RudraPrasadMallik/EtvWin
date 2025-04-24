@@ -5,18 +5,21 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+
+import org.openqa.selenium.support.events.EventFiringDecorator;
+import org.openqa.selenium.support.events.WebDriverListener;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
+
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.etvwin.listner.WebDriverEventHandler;
@@ -25,11 +28,8 @@ import com.etvwin.utility.ConfigReader;
 import com.etvwin.utility.DriverManager;
 import com.etvwin.utility.ReportManager;
 import com.etvwin.utility.ScreenshotUtility;
-
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
-
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Attachment;
 
@@ -45,6 +45,58 @@ public class BaseTest {
 		launchBrowser(ConfigReader.getProperty("appUrl"));
 	}
 	
+	 @BeforeMethod
+	 @Parameters("browser") 
+	public void browserSetup(String browserName) {
+		launchBrowser( browserName,ConfigReader.getProperty("appUrl"));
+	}
+	
+	
+	 public WebDriver launchBrowser(String browserName, String url) {
+		  WebDriver baseDriver = new ChromeDriver();
+		  
+		 if(browserName.equalsIgnoreCase("chrome")) {
+	        // Set up ChromeDriver
+	        WebDriverManager.chromedriver().setup();
+	        ChromeOptions options = new ChromeOptions();
+	       // options.addArguments("--disable-infobars");
+	        //options.addArguments("--incognito");
+	      
+		 }
+		 
+		 else if(browserName.equalsIgnoreCase("firefox")) {
+			 WebDriverManager.firefoxdriver().setup();
+			 baseDriver = new org.openqa.selenium.firefox.FirefoxDriver();
+
+		 }
+		 else if(browserName.equalsIgnoreCase("edge")) {
+			 WebDriverManager.edgedriver().setup();
+			 baseDriver = new org.openqa.selenium.edge.EdgeDriver();
+			 
+		 }
+		 else {
+			 throw new IllegalArgumentException("Browser not supported: " + browserName);
+	     }
+	        
+	        
+	        // Register WebDriverListener properly
+	        WebDriverListener listener = new WebDriverEventHandler();
+	        WebDriver driver = new EventFiringDecorator<>(listener).decorate(baseDriver);
+	        
+	        
+           //Saving the driver instance
+	        DriverManager.getInstance().setDriver(driver);
+	        DriverManager.getInstance().setWebDriverListener((WebDriverEventHandler) listener);
+	      
+	        
+	        // Perform browser setup
+	        driver.get(url);
+	        driver.manage().window().maximize();
+	        System.out.println("Launching Browser.");
+	        return driver;
+	    
+	}
+	
 	 @AfterMethod(alwaysRun = true)
 	    public void browserTeardown(ITestResult result) {
 	        WebDriver driver = DriverManager.getInstance().getDriver();
@@ -58,7 +110,6 @@ public class BaseTest {
 	        }
 	        closeBrowser(driver);
 	    }
-	
 	
 	
 	 public WebDriver launchBrowser(String url) {
@@ -89,18 +140,12 @@ public class BaseTest {
 	
 	 
 	 
-	 
-	 
 	public void closeBrowser(WebDriver driver){
 		System.out.println("Closing Browser.");
 		driver.quit();
 	}
 	
-	
-	
-	
-	
-	
+
 	// Image attachments for Allure
 		@Attachment(value = "Page screenshot", type = "image/png")
 		public byte[] saveScreenshot(WebDriver driver) {

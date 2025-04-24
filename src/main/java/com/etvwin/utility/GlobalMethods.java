@@ -1,0 +1,14 @@
+package com.etvwin.utility;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+
+public class GlobalMethods {
+	
+	
+	 public static void scrollDown(WebDriver driver) {
+	        JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+	    }
+
+}
