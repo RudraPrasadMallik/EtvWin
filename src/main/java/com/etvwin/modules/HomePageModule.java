@@ -32,11 +32,6 @@ import com.etvwin.pageobjects.HomePageObject;
 	    }
 	    
 	    
-	    
-	    
-	    
-	    
-	    
 
 	    public void verifySections() {
 	        int totalSections = homePage.getTotalSections();

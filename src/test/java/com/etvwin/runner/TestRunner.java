@@ -29,7 +29,7 @@ public class TestRunner extends BaseTest {
 	@Video
 	@Description("Test to check Slider banner on Home Page.")
 	@Story("Verify Home Page Slider images..")
-//	@Test(priority = 2)
+	@Test(priority = 2)
 	public void Tc002_VerifyposterimageonHomeCarasoul() {
 		String testCaseName = new Object() {}.getClass().getEnclosingMethod().getName();	
 		HomePageScript homePageScript = new HomePageScript(DriverManager.getInstance().getDriver());
@@ -57,8 +57,6 @@ public class TestRunner extends BaseTest {
 //			
 //	}
 //	
-	
-	
 	
 	
 }

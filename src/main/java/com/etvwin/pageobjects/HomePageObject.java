@@ -29,7 +29,7 @@ public class HomePageObject {
 	  this.elementOps = new ElementOperations(driver);  
   }
   
-  
+
   
   @FindBy(xpath="//a[@class='nav-link']")
   private WebElement tabsOnNavbar;
@@ -37,7 +37,7 @@ public class HomePageObject {
   @FindBy(xpath="//*[name()='path' and contains(@d,'M301.1 34.')]")
   private WebElement audioToggle;
   
-  @FindBy(xpath="//div[@class='watchbutton-content d-flex']")//div[@class='watchbutton-content d-flex']
+  @FindBy(xpath="//div[@class='bannerDescriptionList imagetitle']//div[@class='watchbitton']")//div[@class='watchbutton-content d-flex']
   private WebElement watchNowButtonOnCarasoul;
   
   //

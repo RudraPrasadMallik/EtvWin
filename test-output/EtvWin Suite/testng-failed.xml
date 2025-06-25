@@ -9,8 +9,8 @@
     <classes>
       <class name="com.etvwin.runner.TestRunner">
         <methods>
+          <include name="Tc002_VerifyposterimageonHomeCarasoul"/>
           <include name="configuringLog4j"/>
-          <include name="Tc001_VerifyItems_NavBar"/>
           <include name="browserTeardown"/>
           <include name="browserSetup"/>
         </methods>

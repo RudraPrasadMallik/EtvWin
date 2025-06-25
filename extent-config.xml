@@ -1,0 +1,10 @@
+<extentreports>
+  <configuration>
+    <theme>dark</theme>
+    <encoding>utf-8</encoding>
+    <protocol>HTTPS</protocol>
+    <documentTitle>ETV Win Automation Report</documentTitle>
+    <reportName>Regression Suite Results</reportName>
+    <timeStampFormat>yyyy-MM-dd HH:mm:ss</timeStampFormat>
+  </configuration>
+</extentreports>

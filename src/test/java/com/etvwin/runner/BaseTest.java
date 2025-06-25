@@ -3,6 +3,7 @@ package com.etvwin.runner;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -40,11 +41,13 @@ public class BaseTest {
 	
 	 @BeforeMethod
 	 @Parameters("browser") 
-	public void browserSetup(@Optional("chrome")String browserName) 
+	public void browserSetup(@Optional("chrome")String browserName, Method method) 
 	 {
 		 System.out.println("======> browserSetup() called");
 		    System.out.println("======> Parameter passed: " + browserName);
 		launchBrowser( browserName,ConfigReader.getProperty("appUrl"));
+		
+		  ReportManager.startTest(method.getName());
 	}
 	
 	 public WebDriver launchBrowser(String browserName, String url) {
@@ -103,10 +106,10 @@ public class BaseTest {
 	                     ReportManager.getTest().fail("Screenshot",
 	                             MediaEntityBuilder.createScreenCaptureFromPath(imageFilePath).build());
 	                 } else {
-	                     System.err.println("ReportManager.getTest() is null.");
+	                     System.out.println("ReportManager.getTest() is returning null inside BaseTest.");
 	                 }
 	             } else {
-	                 System.err.println("ScreenshotUtility returned null or empty path.");
+	                 System.err.println("ScreenshotUtility returned null or empty path inside Base Test.");
 	             }
 	         }
 	     } catch (Exception e) {
@@ -131,8 +134,8 @@ public class BaseTest {
 //	        }
 //	        closeBrowser(driver);
 //	    }
-//	 
-//	 
+
+	 
 	public void closeBrowser(WebDriver driver){
 		System.out.println("Closing Browser.");
 		driver.quit();
