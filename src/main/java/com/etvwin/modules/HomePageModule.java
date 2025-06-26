@@ -25,7 +25,7 @@ import com.etvwin.pageobjects.HomePageObject;
 	    	
 	    }
 	    
-	    public void verifylogoItemsSliderHime() {
+	    public void verifylogoItemsSliderHome() {
 	    	Log.info("Verifying logo Slider on Home carasoul...");
 	    	homePage.verifyItemsonSlider();
 	    	

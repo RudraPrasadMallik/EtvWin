@@ -143,16 +143,17 @@ public class HomePageObject {
 
    
    
+   
    public void verifyItemsonSlider() {
 	   
 	   boolean keepClicking = true;
        int previousSize = 0;
        int maxAttempts = 25;
        int attempt = 0;
-       
+       try {
 	   JavascriptExecutor js = (JavascriptExecutor) driver;
        Actions actions = new Actions(driver);
-        js.executeAsyncScript("arguments[0].scrollIntoView(true);",logoSliderHome);
+        js.executeScript("arguments[0].scrollIntoView(true);",logoSliderHome);
        
         
         Set<String>  allImageUrls = new HashSet<>();
@@ -160,21 +161,49 @@ public class HomePageObject {
         while(keepClicking && attempt < maxAttempts) {
         	
         	List<WebElement>  images =  logoImages;
+        	Log.info("The total images found :"+images.size());
         	
+        	  if (images.isEmpty()) {
+                  throw new RuntimeException("No logo images found in the slider.");
+              }
         	
             for (WebElement img : images) {
                 String src = img.getAttribute("src");
                 if (src != null && !src.isEmpty()) {
                     allImageUrls.add(src);
-                    Log.info("These are the images" +images);                   
+                    Log.info("These are the images" +src);                   
                 }
             }
+            Log.info("Attempt: " + (attempt + 1) + " | Total unique images: " + allImageUrls.size());
+
+            if (allImageUrls.size() == previousSize) {
+                keepClicking = false;
+            } else {
+                previousSize = allImageUrls.size();
+                attempt++;
+                try {
+                    js.executeScript("arguments[0].scrollBy(200, 0);", logoSliderHome); // Horizontal scroll
+                    Thread.sleep(1000); // Wait a bit to let images load
+                } catch (Exception e) {
+                    Log.warn("Scrolling error: " + e.getMessage());
+                }
+            }
+        }
+
+        // Final log
+        for (String src : allImageUrls) {
+            Log.info("Collected image URL: " + src);
+        }
             
-            
-            
+        }
+        catch(Exception e){
+        	Log.error("Exception in verifyItemsonSlider(): " + e.getMessage(), e);
+            throw new RuntimeException("verifyItemsonSlider failed", e);
         }
              
    }
+   
+   
    
    
    

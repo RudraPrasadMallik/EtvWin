@@ -9,10 +9,12 @@
     <classes>
       <class name="com.etvwin.runner.TestRunner">
         <methods>
+          <include name="startTest"/>
           <include name="Tc002_VerifyposterimageonHomeCarasoul"/>
           <include name="configuringLog4j"/>
-          <include name="browserTeardown"/>
-          <include name="browserSetup"/>
+          <include name="setUpBrowser"/>
+          <include name="tearDownClass"/>
+          <include name="captureFailureIfAny"/>
         </methods>
       </class> <!-- com.etvwin.runner.TestRunner -->
     </classes>

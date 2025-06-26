@@ -1,9 +1,11 @@
 package com.etvwin.runner;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import com.automation.remarks.video.annotations.Video;
 import com.etvwin.scripts.HomePageScript;
+import com.etvwin.utility.ConfigReader;
 import com.etvwin.utility.DriverManager;
 import com.etvwin.utility.Log;
 
@@ -31,32 +33,42 @@ public class TestRunner extends BaseTest {
 	@Story("Verify Home Page Slider images..")
 	@Test(priority = 2)
 	public void Tc002_VerifyposterimageonHomeCarasoul() {
-		String testCaseName = new Object() {}.getClass().getEnclosingMethod().getName();	
-		HomePageScript homePageScript = new HomePageScript(DriverManager.getInstance().getDriver());
-				
+		DriverManager.getInstance().getDriver().get(ConfigReader.getProperty("appUrl"));
+		 WebDriver driver = DriverManager.getInstance().getDriver();
+		Log.info("Current URL: " + driver.getCurrentUrl());
+
+	    // Optional safety: reload home page
+	    String appUrl = ConfigReader.getProperty("appUrl");
+	    if (!driver.getCurrentUrl().equals(appUrl)) {
+	        Log.info("Redirecting to appUrl again: " + appUrl);
+	        driver.get(appUrl);
+	    }
+
+	    String testCaseName = new Object(){}.getClass().getEnclosingMethod().getName();
+	    HomePageScript homePageScript = new HomePageScript(driver);
 				homePageScript.verifyposterimageCarasoulHome(testCaseName);
 		
 	}
 	
 	
 	
-//	
-//	//@Severity(SeverityLevel.BLOCKER)
-////	@Video
-////	@Description("Test to check items available on Home Page.")
-////	@Story("Verify Home Page")
-////	@Test(priority = 3)
-//	public void Tc002_VerifySectionsHome() {
-//		String testCaseName = new Object(){}.getClass().getEnclosingMethod().getName();
-//
-//		Log.info("This is inside Testcase2");
-//
-//		HomePageScript homePageScript = new HomePageScript(DriverManager.getInstance().getDriver());
-//		homePageScript.verifySectionsOnHomePage(testCaseName);
-//		
-//			
-//	}
-//	
+	
+	//@Severity(SeverityLevel.BLOCKER)
+	@Video
+	@Description("Test to check items available on Home Page.")
+	@Story("Verify Home Page")
+	@Test(priority = 3)
+	public void Tc002_VerifySectionsHome() {
+		String testCaseName = new Object(){}.getClass().getEnclosingMethod().getName();
+
+		Log.info("This is inside Testcase2");
+
+		HomePageScript homePageScript = new HomePageScript(DriverManager.getInstance().getDriver());
+		homePageScript.verifySectionsOnHomePage(testCaseName);
+		
+			
+	}
+	
 	
 	
 }

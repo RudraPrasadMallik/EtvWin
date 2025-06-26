@@ -34,7 +34,7 @@ public class HomePageScript {
 	public void verifyposterimageCarasoulHome(String testCaseName) {
 		ExtentTest test = ReportManager.getTest();
 		
-		homePageModule.verifylogoItemsSliderHime();
+		homePageModule.verifylogoItemsSliderHome();
 		test.log(Status.INFO, "Verifying carasoul slider on Home");
 		
 	}
