@@ -40,7 +40,6 @@ public class HomePageScript {
 	}
 	
 	
-	
 	public void verifySectionsOnHomePage(String testCaseName) {
 		ExtentTest test = ReportManager.getTest();
 		
@@ -58,5 +57,19 @@ public class HomePageScript {
 		}
 		
 	}
+	
+	
+	public void verifySeeAllButons() {
+		ExtentTest test = ReportManager.getTest();
+		try {
+			
+//			homePageModule.verifyMoreButtonFunc();
+			test.log(Status.INFO,"Checking More button availability");
+		}
+		catch(Exception e) {
+			Log.error("This is the error on verify See All on Home Page :"+e);	
+		}
+	}
+	
 	
 }

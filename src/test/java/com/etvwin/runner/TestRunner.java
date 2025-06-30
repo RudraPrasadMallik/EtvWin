@@ -51,23 +51,42 @@ public class TestRunner extends BaseTest {
 	}
 	
 	
-	
-	
 	//@Severity(SeverityLevel.BLOCKER)
 	@Video
 	@Description("Test to check items available on Home Page.")
 	@Story("Verify Home Page")
 	@Test(priority = 3)
-	public void Tc002_VerifySectionsHome() {
+	public void Tc003_VerifySectionsHome() {
 		String testCaseName = new Object(){}.getClass().getEnclosingMethod().getName();
 
-		Log.info("This is inside Testcase2");
+		Log.info("This is inside Testcase3");
 
 		HomePageScript homePageScript = new HomePageScript(DriverManager.getInstance().getDriver());
 		homePageScript.verifySectionsOnHomePage(testCaseName);
-		
 			
 	}
+	
+	
+	@Video
+	@Description("Test to check SeeAll button available on Home Page.")
+	@Story("Verify Home Page See All Buttons")
+	@Test(priority = 4)
+	public void Tc004_VerifySeeAllButonHome() {
+		String testCaseName = new Object(){}.getClass().getEnclosingMethod().getName();
+
+		Log.info("This is inside Testcase 4");
+
+		HomePageScript homePageScript = new HomePageScript(DriverManager.getInstance().getDriver());
+		homePageScript.verifySeeAllButons();
+			
+	}
+	
+	   
+	
+	
+	
+	
+	
 	
 	
 	

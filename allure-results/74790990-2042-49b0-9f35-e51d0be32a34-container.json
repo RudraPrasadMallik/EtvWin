@@ -1,0 +1,1 @@
+{"uuid":"74790990-2042-49b0-9f35-e51d0be32a34","name":"EtvWin Suite","children":["5264df22-54f7-426e-9eaa-fd8b7f6526de"],"befores":[{"name":"configuringLog4j","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1751281012623,"stop":1751281012722}],"afters":[],"start":1751281012584,"stop":1751281093749}

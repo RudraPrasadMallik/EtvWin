@@ -205,44 +205,50 @@ public class HomePageObject {
    
    
    
-   
-   
    public int getTotalSections() {
+	    return sectionTitles.size();
+	}
+   
+   
+   public void verifySectionsAndSeeAllButtons() {
        int previousCount = 0;
-       int currentCount = sectionTitles.size();
-       int maxAttempts = 20; 
+       int currentCount = 0;
+       int maxAttempts = 30; 
        int attempt = 0;
 
        while (attempt < maxAttempts) {
            GlobalMethods.scrollDown(driver);
 
-           if (!sectionTitles.isEmpty()) {
-               elementOps.waitForAllSectionsToLoad(sectionTitles);
+           int totalSections = getTotalSections(); 
+           if (totalSections > currentCount) {
+        	  
+               for (int i = currentCount; i < totalSections; i++) {
+                   String sectionName = getSectionName(i);
+                   Log.info("Verifying Section: " + sectionName);
+
+                   if (isMoreButtonAvailable(i)) {
+                       Log.info("See All button available for: " + sectionName);
+                       // Don't click here yet; just verify it's present
+                   } else {
+                       Log.info("No See All button for: " + sectionName);
+                   }
+               }
            }
 
-
            previousCount = currentCount;
-           currentCount = sectionTitles.size();
-           Log.info("Attempt " + attempt + ": Sections found = " + currentCount);
+           currentCount = totalSections;
 
-           if (currentCount == previousCount) {
-               if (!GlobalMethods.scrollToBottom(driver)) {
-                   break;
-               }
-               if (!sectionTitles.isEmpty()) {
-                   elementOps.waitForAllSectionsToLoad(sectionTitles);
-               }
-              
-               currentCount = sectionTitles.size();
-               Log.info("After bottom scroll, sections found = " + currentCount);
+           if (currentCount == previousCount && !GlobalMethods.scrollToBottom(driver)) {
+               break;
            }
 
            attempt++;
        }
 
-       Log.info("Final number of sections is : " + sectionTitles.size());
-       return sectionTitles.size();
+       Log.info("Finished verifying sections and See All buttons.");
    }
+   
+   
    
    
    public String getSectionName(int index) {
@@ -250,22 +256,30 @@ public class HomePageObject {
    }
 	
    
+  
    
    public boolean isMoreButtonAvailable(int index) {
 	   return moreButtons.size()>index;
 	   
    }
    
+//   
+//   public void clickMoreButton(int index) {
+//       if (isMoreButtonAvailable(index)) {
+//           moreButtons.get(index).click();
+//       }
+//   }
+//   
    
-   public void clickMoreButton(int index) {
-       if (isMoreButtonAvailable(index)) {
-           moreButtons.get(index).click();
-       }
-   }
+   
+   
+   
+   
+   
    
    
    public int getTotalContentItems() {
        return contentItems.size();
-   }
+   }    
    
 }

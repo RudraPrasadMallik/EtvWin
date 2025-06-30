@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-EtvWin_Suite" class="navigator-link">
-              <span class="suite-name border-passed">EtvWin Suite</span>
+              <span class="suite-name border-failed">EtvWin Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-EtvWin_Suite" class="hide-methods failed suite-EtvWin_Suite"> (hide)</a> <!-- hide-methods failed suite-EtvWin_Suite -->
+                      <a href="#" panel-name="suite-EtvWin_Suite" class="show-methods failed suite-EtvWin_Suite"> (show)</a> <!-- show-methods failed suite-EtvWin_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-EtvWin_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EtvWin_Suite" title="com.etvwin.runner.TestRunner" class="method navigator-link" hash-for-method="Tc004_VerifySeeAllButonHome">Tc004_VerifySeeAllButonHome</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-EtvWin_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,12 +122,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-EtvWin_Suite" title="com.etvwin.runner.TestRunner" class="method navigator-link" hash-for-method="Tc002_VerifySectionsHome">Tc002_VerifySectionsHome</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-EtvWin_Suite" title="com.etvwin.runner.TestRunner" class="method navigator-link" hash-for-method="Tc002_VerifyposterimageonHomeCarasoul">Tc002_VerifyposterimageonHomeCarasoul</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-EtvWin_Suite" title="com.etvwin.runner.TestRunner" class="method navigator-link" hash-for-method="Tc002_VerifyposterimageonHomeCarasoul">Tc002_VerifyposterimageonHomeCarasoul</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-EtvWin_Suite" title="com.etvwin.runner.TestRunner" class="method navigator-link" hash-for-method="Tc003_VerifySectionsHome">Tc003_VerifySectionsHome</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-EtvWin_Suite -->
@@ -128,6 +142,29 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-EtvWin_Suite" class="panel EtvWin_Suite">
+          <div class="suite-EtvWin_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.etvwin.runner.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Tc004_VerifySeeAllButonHome">
+                  </a> <!-- Tc004_VerifySeeAllButonHome -->
+                  <span class="method-name">Tc004_VerifySeeAllButonHome</span>
+                  <div class="stack-trace">java.lang.Error: Unresolved compilation problem: 
+	The method verifyMoreButtonFunc() is undefined for the type HomePageModule
+
+	at com.etvwin.scripts.HomePageScript.verifySeeAllButons(HomePageScript.java:66)
+	at com.etvwin.runner.TestRunner.Tc004_VerifySeeAllButonHome(TestRunner.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-EtvWin_Suite-class-failed -->
           <div class="suite-EtvWin_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -143,16 +180,16 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="Tc002_VerifySectionsHome">
-                  </a> <!-- Tc002_VerifySectionsHome -->
-                  <span class="method-name">Tc002_VerifySectionsHome</span>
+                  <a name="Tc002_VerifyposterimageonHomeCarasoul">
+                  </a> <!-- Tc002_VerifyposterimageonHomeCarasoul -->
+                  <span class="method-name">Tc002_VerifyposterimageonHomeCarasoul</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="Tc002_VerifyposterimageonHomeCarasoul">
-                  </a> <!-- Tc002_VerifyposterimageonHomeCarasoul -->
-                  <span class="method-name">Tc002_VerifyposterimageonHomeCarasoul</span>
+                  <a name="Tc003_VerifySectionsHome">
+                  </a> <!-- Tc003_VerifySectionsHome -->
+                  <span class="method-name">Tc003_VerifySectionsHome</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -213,24 +250,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Tc001_VerifyItems_NavBar')
 data.setCell(0, 2, 'com.etvwin.runner.TestRunner')
-data.setCell(0, 3, 30867);
+data.setCell(0, 3, 29469);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Tc002_VerifySectionsHome')
+data.setCell(1, 1, 'Tc002_VerifyposterimageonHomeCarasoul')
 data.setCell(1, 2, 'com.etvwin.runner.TestRunner')
-data.setCell(1, 3, 8725);
+data.setCell(1, 3, 4705);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Tc002_VerifyposterimageonHomeCarasoul')
+data.setCell(2, 1, 'Tc003_VerifySectionsHome')
 data.setCell(2, 2, 'com.etvwin.runner.TestRunner')
-data.setCell(2, 3, 4250);
+data.setCell(2, 3, 519);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Tc004_VerifySeeAllButonHome')
+data.setCell(3, 2, 'com.etvwin.runner.TestRunner')
+data.setCell(3, 3, 5);
 window.suiteTableData['EtvWin_Suite']= { tableData: data, tableDiv: 'times-div-EtvWin_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 43 seconds</span>
+              <span class="suite-total-time">Total running time: 34 seconds</span>
               <div id="times-div-EtvWin_Suite">
               </div> <!-- times-div-EtvWin_Suite -->
             </div> <!-- times-div -->
@@ -263,47 +304,61 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpBrowser(chrome)</span>
-                <span class="method-start">112 ms</span>
+                <span class="method-start">99 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">startTest(public void com.etvwin.runner.TestRunner.Tc001_VerifyItems_NavBar())</span>
-                <span class="method-start">16929 ms</span>
+                <span class="method-start">12470 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Tc001_VerifyItems_NavBar</span>
-                <span class="method-start">17286 ms</span>
+                <span class="method-start">12789 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">captureFailureIfAny([TestResult name=Tc001_VerifyItems_NavBar status=SUCCESS method=TestRunner.Tc001_VerifyItems_NavBar(...)</span>
-                <span class="method-start">48164 ms</span>
+                <span class="method-start">42272 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">startTest(public void com.etvwin.runner.TestRunner.Tc002_VerifyposterimageonHomeCarasoul())</span>
-                <span class="method-start">48169 ms</span>
+                <span class="method-start">42278 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Tc002_VerifyposterimageonHomeCarasoul</span>
-                <span class="method-start">48171 ms</span>
+                <span class="method-start">42279 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">captureFailureIfAny([TestResult name=Tc002_VerifyposterimageonHomeCarasoul status=SUCCESS method=TestRunner.Tc002_Verify...)</span>
-                <span class="method-start">52426 ms</span>
+                <span class="method-start">47006 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">startTest(public void com.etvwin.runner.TestRunner.Tc002_VerifySectionsHome())</span>
-                <span class="method-start">52430 ms</span>
+                <span class="method-name">startTest(public void com.etvwin.runner.TestRunner.Tc003_VerifySectionsHome())</span>
+                <span class="method-start">47011 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Tc002_VerifySectionsHome</span>
-                <span class="method-start">52443 ms</span>
+                <span class="method-name">Tc003_VerifySectionsHome</span>
+                <span class="method-start">47014 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">captureFailureIfAny([TestResult name=Tc002_VerifySectionsHome status=SUCCESS method=TestRunner.Tc002_VerifySectionsHome(...)</span>
-                <span class="method-start">61172 ms</span>
+                <span class="method-name">captureFailureIfAny([TestResult name=Tc003_VerifySectionsHome status=SUCCESS method=TestRunner.Tc003_VerifySectionsHome(...)</span>
+                <span class="method-start">47538 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startTest(public void com.etvwin.runner.TestRunner.Tc004_VerifySeeAllButonHome())</span>
+                <span class="method-start">47542 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Tc004_VerifySeeAllButonHome</span>
+                <span class="method-start">47544 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">captureFailureIfAny([TestResult name=Tc004_VerifySeeAllButonHome status=FAILURE method=TestRunner.Tc004_VerifySeeAllButo...)</span>
+                <span class="method-start">47556 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">61177 ms</span>
+                <span class="method-start">54539 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

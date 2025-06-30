@@ -42,14 +42,30 @@ import com.etvwin.pageobjects.HomePageObject;
 	            Log.info("Verifying Section: " + sectionName);
 
 	            
-//	            if (homePage.isMoreButtonAvailable(i)) {
-//	               Log.info("More Button Available for " + sectionName);
-//	                homePage.clickMoreButton(i);
-//	                // Add validation for more page navigation
-//	            } 
-//	            else {
-//	                Log.info("No More Button for " + sectionName);
-//	            }
+
 	        }
 	    }
+	    
+	    
+	    
+//	    
+//	    public void verifyMoreButtonFunc() {
+//	    	 int totalSections = homePage.getTotalSections();
+//	    	for(int i=0;i< totalSections;i++) {
+//	    	   String sectionName = homePage.getSectionName(i);
+//            if (homePage.isMoreButtonAvailable(i)) {
+//            Log.info("More Button Available for " + sectionName);
+//             homePage.clickMoreButton(i);
+//             // Add validation for more page navigation
+//         } 
+//         else {
+//             Log.info("No More Button for " + sectionName);
+//         }
+//	    	}
+//	    	
+//	    }
+	    
+	    
+	    
+	    
 	}
